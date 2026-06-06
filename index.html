@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solaman U M | Portfolio - Frontend Developer & Data Analyst</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Portfolio of Solaman U M, a Frontend Developer and Data Analyst specializing in React.js, Python, Django, Machine Learning, and Power BI. Discover projects, certifications, and resume.">
+    <meta name="keywords" content="Solaman U M, Solaman, Portfolio, Frontend Developer, Data Analyst, React, Python, Django, Power BI, Machine Learning, India, MCA, Thrissur">
+    <meta name="author" content="Solaman U M">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-mode">
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-ring" id="cursor-ring"></div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-text-gradient">Solaman</span><span class="logo-dot">.</span>
+            </a>
+            
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-toggle" aria-label="Toggle Menu" id="mobile-toggle">
+                <i data-lucide="menu" class="menu-icon"></i>
+                <i data-lucide="x" class="close-icon hidden"></i>
+            </button>
+            
+            <!-- Nav Links -->
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#certifications" class="nav-link">Certifications</a></li>
+                    <li><a href="#resume-section" class="nav-link">Resume</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <!-- Theme Toggle -->
+                    <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Theme">
+                        <i data-lucide="sun" class="sun-icon"></i>
+                        <i data-lucide="moon" class="moon-icon hidden"></i>
+                    </button>
+                    <!-- CTA Link -->
+                    <a href="#contact" class="btn btn-sm btn-gradient">Hire Me</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-bg-glows">
+                <div class="glow glow-1"></div>
+                <div class="glow glow-2"></div>
+            </div>
+            
+            <div class="container hero-container">
+                <div class="hero-content fade-in-up">
+                    <div class="badge-container">
+                        <span class="hero-badge">
+                            <span class="pulse-dot"></span> Open to Work &amp; Collaborations
+                        </span>
+                    </div>
+                    <p class="hero-greeting">Hi there, I'm</p>
+                    <h1 class="hero-title">
+                        <span class="hero-name">Solaman U M</span>
+                    </h1>
+                    <div class="hero-role-line">
+                        <span class="role-static">I build&nbsp;</span>
+                        <span class="typewriter" id="typewriter"></span><span class="typewriter-cursor">|</span>
+                    </div>
+                    <p class="hero-description">
+                        A passionate <strong class="name-highlight">Frontend Developer &amp; Data Analyst</strong> who ships production-ready apps — from pixel-perfect React UIs to ML-powered dashboards and cloud-deployed microservices.
+                    </p>
+                    
+                    <div class="hero-cta">
+                        <a href="#projects" class="btn btn-lg btn-gradient">
+                            <span>Explore My Work</span>
+                            <i data-lucide="arrow-right" class="icon-sm"></i>
+                        </a>
+                        <a href="resume.html" target="_blank" class="btn btn-lg btn-outline">
+                            <span>View Resume</span>
+                            <i data-lucide="file-text" class="icon-sm"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="hero-socials">
+                        <a href="https://linkedin.com/in/solaman-um-b4264427b" target="_blank" rel="noopener" class="social-icon-link" aria-label="LinkedIn">
+                            <i data-lucide="linkedin"></i>
+                        </a>
+                        <a href="mailto:solamanum@gmail.com" class="social-icon-link" aria-label="Email">
+                            <i data-lucide="mail"></i>
+                        </a>
+                        <a href="tel:+919526127632" class="social-icon-link" aria-label="Phone">
+                            <i data-lucide="phone"></i>
+                        </a>
+                    </div>
+
+                    <!-- Tech Stack Strip -->
+                    <div class="tech-strip">
+                        <span class="tech-strip-label">Tech Stack</span>
+                        <div class="tech-icons">
+                            <span class="tech-icon" title="React.js"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React"></span>
+                            <span class="tech-icon" title="Python"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python"></span>
+                            <span class="tech-icon" title="Next.js"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" alt="Next.js"></span>
+                            <span class="tech-icon" title="TypeScript"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" alt="TypeScript"></span>
+                            <span class="tech-icon" title="Django"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg" alt="Django"></span>
+                            <span class="tech-icon" title="Docker"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" alt="Docker"></span>
+                            <span class="tech-icon" title="Azure"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg" alt="Azure"></span>
+                            <span class="tech-icon" title="Power BI"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JS"></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-visual fade-in-up delay-200">
+                    <div class="visual-card-wrapper">
+                        <!-- Card 1: Code Block -->
+                        <div class="visual-card code-card floating-1">
+                            <div class="card-header">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                                <span class="card-title-text">App.js</span>
+                            </div>
+                            <pre class="code-content"><code><span class="keyword">const</span> <span class="function">Developer</span> = () => {
+  <span class="keyword">return</span> (
+    <span class="tag">&lt;</span><span class="component">Portfolio</span><span class="tag">&gt;</span>
+      <span class="tag">&lt;</span><span class="component">React</span> <span class="attr">focus</span>=<span class="string">"UI/UX"</span> <span class="tag">/&gt;</span>
+      <span class="tag">&lt;</span><span class="component">Python</span> <span class="attr">ML</span>={<span class="variable">true</span>} <span class="tag">/&gt;</span>
+      <span class="tag">&lt;</span><span class="component">PowerBI</span> <span class="attr">data</span>=<span class="variable">"metrics"</span> <span class="tag">/&gt;</span>
+    <span class="tag">&lt;/</span><span class="component">Portfolio</span><span class="tag">&gt;</span>
+  );
+}</code></pre>
+                        </div>
+                        
+                        <!-- Card 2: Metrics Dashboard Mockup -->
+                        <div class="visual-card metrics-card floating-2">
+                            <div class="metrics-header">
+                                <span class="metrics-title">ML Accuracy</span>
+                                <span class="metrics-value text-gradient">85%</span>
+                            </div>
+                            <div class="metrics-chart">
+                                <div class="bar-chart-container">
+                                    <div class="chart-bar" style="height: 45%;"></div>
+                                    <div class="chart-bar" style="height: 60%;"></div>
+                                    <div class="chart-bar active" style="height: 85%;"></div>
+                                    <div class="chart-bar" style="height: 50%;"></div>
+                                    <div class="chart-bar" style="height: 70%;"></div>
+                                </div>
+                            </div>
+                            <p class="metrics-label">Breast Cancer Prediction Model</p>
+                        </div>
+                        
+                        <!-- Card 3: Profile Summary Mini -->
+                        <div class="visual-card profile-card floating-3">
+                            <div class="profile-header">
+                                <div class="profile-avatar">S</div>
+                                <div class="profile-meta">
+                                    <h4>Solaman U M</h4>
+                                    <p>MCA Candidate</p>
+                                </div>
+                            </div>
+                            <div class="tag-cloud">
+                                <span class="mini-tag">React.js</span>
+                                <span class="mini-tag">Python</span>
+                                <span class="mini-tag">Django</span>
+                                <span class="mini-tag">Power BI</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <a href="#about" class="scroll-indicator" aria-label="Scroll Down">
+                <span class="mouse-icon">
+                    <span class="wheel"></span>
+                </span>
+            </a>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section section-padding">
+            <div class="container">
+                <div class="section-title-wrapper fade-in-up">
+                    <span class="section-subtitle">Who I Am</span>
+                    <h2 class="section-title">About Me</h2>
+                    <div class="title-underline"></div>
+                </div>
+                
+                <div class="about-grid">
+                    <div class="about-info-panel fade-in-up">
+                        <h3 class="about-heading">Blending technical expertise with analytical insights</h3>
+                        <p class="about-text">
+                            I am currently pursuing my <strong>Master's degree in Computer Applications (MCA)</strong> at the <em>Nehru College of Engineering and Research Centre</em> in Thrissur, India (Class of 2026). My academic foundation, combined with hands-on project experience, has enabled me to bridge the gap between creative frontend development and complex data engineering.
+                        </p>
+                        <p class="about-text">
+                            Whether it's building interactive user interfaces with <strong>React.js</strong> and <strong>Bootstrap</strong> or deploying custom machine learning models using <strong>Flask</strong> and <strong>Django</strong>, I thrive on writing clean, maintainable code. My experience extends to data visualization with <strong>Power BI</strong>, where I uncover key drivers that help improve marketing and product strategies.
+                        </p>
+                        
+                        <div class="about-details-list">
+                            <div class="detail-item">
+                                <i data-lucide="graduation-cap" class="detail-icon"></i>
+                                <div>
+                                    <h5>MCA Graduate Program</h5>
+                                    <p>Nehru College of Engineering (2024 - 2026)</p>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <i data-lucide="map-pin" class="detail-icon"></i>
+                                <div>
+                                    <h5>Location</h5>
+                                    <p>Thrissur, Kerala, India</p>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <i data-lucide="briefcase" class="detail-icon"></i>
+                                <div>
+                                    <h5>Interests</h5>
+                                    <p>Frontend Development, Web Apps, ML, NLP & Data Analytics</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-stats-panel fade-in-up delay-200">
+                        <div class="stat-card">
+                            <div class="stat-num text-gradient">6+</div>
+                            <div class="stat-label">Core Projects Completed</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-num text-gradient">15+</div>
+                            <div class="stat-label">Industry Certifications</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-num text-gradient">95%</div>
+                            <div class="stat-label">Client/User Satisfaction</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-num text-gradient">40%</div>
+                            <div class="stat-label">ML Data Processing Speedup</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section section-padding bg-alt">
+            <div class="container">
+                <div class="section-title-wrapper fade-in-up">
+                    <span class="section-subtitle">What I Bring to the Table</span>
+                    <h2 class="section-title">Skills & Interests</h2>
+                    <div class="title-underline"></div>
+                </div>
+                
+                <div class="skills-grid">
+                    <!-- Frontend Skills -->
+                    <div class="skills-card fade-in-up">
+                        <div class="skills-header">
+                            <i data-lucide="layout" class="skills-cat-icon"></i>
+                            <h3>Frontend Technologies</h3>
+                        </div>
+                        <p class="skills-desc">Designing highly responsive, modular, and accessible user interfaces.</p>
+                        <ul class="skills-list">
+                            <li>
+                                <div class="skill-name-percent">
+                                    <span>React.js</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="progress-bar"><div class="progress-fill" data-percent="80%"></div></div>
+                            </li>
+                            <li>
+                                <div class="skill-name-percent">
+                                    <span>HTML5 & CSS3</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="progress-bar"><div class="progress-fill" data-percent="90%"></div></div>
+                            </li>
+                            <li>
+                                <div class="skill-name-percent">
+                                    <span>Bootstrap</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="progress-bar"><div class="progress-fill" data-percent="85%"></div></div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Programming & Backend -->
+                    <div class="skills-card fade-in-up delay-100">
+                        <div class="skills-header">
+                            <i data-lucide="code" class="skills-cat-icon"></i>
+                            <h3>Programming & Backend</h3>
+                        </div>
+                        <p class="skills-desc">Writing clean logical code and creating backend services/APIs.</p>
+                        <ul class="skills-list">
+                            <li>
+                                <div class="skill-name-percent">
+                                    <span>Python (Flask/Django)</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="progress-bar"><div class="progress-fill" data-percent="85%"></div></div>
+                            </li>
+                            <li>
+                                <div class="skill-name-percent">
+                                    <span>C++</span>
+                                    <span>75%</span>
+                                </div>
+                                <div class="progress-bar"><div class="progress-fill" data-percent="75%"></div></div>
+                            </li>
+                            <li>
+                                <div class="skill-name-percent">
+                                    <span>SQL Databases</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="progress-bar"><div class="progress-fill" data-percent="80%"></div></div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Data Analytics & ML -->
+                    <div class="skills-card fade-in-up delay-200">
+                        <div class="skills-header">
+                            <i data-lucide="bar-chart-2" class="skills-cat-icon"></i>
+                            <h3>Data Analytics & ML</h3>
+                        </div>
+                        <p class="skills-desc">Applying statistical models and visualizing insights to guide actions.</p>
+                        <ul class="skills-list">
+                            <li>
+                                <div class="skill-name-percent">
+                                    <span>Power BI (Visualization)</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="progress-bar"><div class="progress-fill" data-percent="85%"></div></div>
+                            </li>
+                            <li>
+                                <div class="skill-name-percent">
+                                    <span>Scikit-learn & Pandas</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="progress-bar"><div class="progress-fill" data-percent="80%"></div></div>
+                            </li>
+                            <li>
+                                <div class="skill-name-percent">
+                                    <span>Supervised/Unsupervised ML</span>
+                                    <span>75%</span>
+                                </div>
+                                <div class="progress-bar"><div class="progress-fill" data-percent="75%"></div></div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Soft Skills -->
+                    <div class="skills-card fade-in-up delay-300">
+                        <div class="skills-header">
+                            <i data-lucide="users" class="skills-cat-icon"></i>
+                            <h3>Professional Qualities</h3>
+                        </div>
+                        <p class="skills-desc">Critical competencies that facilitate team success and project execution.</p>
+                        <ul class="skills-list">
+                            <li>
+                                <div class="skill-name-percent">
+                                    <span>Data-driven Decision Making</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="progress-bar"><div class="progress-fill" data-percent="90%"></div></div>
+                            </li>
+                            <li>
+                                <div class="skill-name-percent">
+                                    <span>Critical Thinking & Logic</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="progress-bar"><div class="progress-fill" data-percent="85%"></div></div>
+                            </li>
+                            <li>
+                                <div class="skill-name-percent">
+                                    <span>Agile Software Development</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="progress-bar"><div class="progress-fill" data-percent="80%"></div></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section section-padding">
+            <div class="container">
+                <div class="section-title-wrapper fade-in-up">
+                    <span class="section-subtitle">My Portfolio</span>
+                    <h2 class="section-title">Featured Projects</h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <!-- Projects Filter Buttons -->
+                <div class="filter-wrapper fade-in-up">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="web">Web Dev</button>
+                    <button class="filter-btn" data-filter="ml">ML & NLP</button>
+                    <button class="filter-btn" data-filter="analytics">Data Analytics</button>
+                </div>
+
+                <!-- Projects Grid -->
+                <div class="projects-grid">
+                    <!-- Project POC 46: Creator Distribution Funnel -->
+                    <article class="project-card fade-in-up" data-category="web">
+                        <div class="project-img-placeholder gradient-project-5">
+                            <i data-lucide="pie-chart" class="project-icon-bg"></i>
+                            <div class="project-badge">Full Stack / Azure</div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">POC 46 Creator Distribution Funnel</h3>
+                            <p class="project-summary">Designed, developed, and deployed an interactive distribution model forecasting creator analytics. Developed during the Real Rails Internship Program.</p>
+                            
+                            <ul class="project-points">
+                                <li>Engineered a fast, responsive frontend using Next.js, TypeScript, and Tailwind CSS following Spec-Driven Development.</li>
+                                <li>Built the backend API using FastAPI and deployed the containerized system (Docker) on Azure Container Apps.</li>
+                            </ul>
+                            
+                            <div class="project-tags">
+                                <span>Next.js</span>
+                                <span>FastAPI</span>
+                                <span>Tailwind CSS</span>
+                                <span>Docker</span>
+                                <span>Azure</span>
+                            </div>
+                            
+                            <div class="project-links">
+                                <a href="https://github.com/solaman-um-b4264427b" target="_blank" rel="noopener" class="project-link" aria-label="GitHub Repository">
+                                    <i data-lucide="github"></i> Code
+                                </a>
+                                <a href="https://lnkd.in/gmwh8nF4" target="_blank" rel="noopener" class="project-link" aria-label="Live Demo">
+                                    <i data-lucide="external-link"></i> Demo
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project POC 42: Mobile Ad Journey -->
+                    <article class="project-card fade-in-up delay-100" data-category="web">
+                        <div class="project-img-placeholder gradient-project-1">
+                            <i data-lucide="navigation" class="project-icon-bg"></i>
+                            <div class="project-badge">Cloud Web App</div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">POC 42 Mobile Ad Journey</h3>
+                            <p class="project-summary">Developed a cloud-deployed ad journey tracker visualizing ad routing, user flows, and conversion metrics.</p>
+                            
+                            <ul class="project-points">
+                                <li>Implemented responsive frontend modules with Next.js, TypeScript, and Tailwind CSS.</li>
+                                <li>Configured Docker images and managed automated pipelines for deployment on Azure Container Apps.</li>
+                            </ul>
+                            
+                            <div class="project-tags">
+                                <span>Next.js</span>
+                                <span>TypeScript</span>
+                                <span>Tailwind CSS</span>
+                                <span>Docker</span>
+                                <span>Azure</span>
+                            </div>
+                            
+                            <div class="project-links">
+                                <a href="https://github.com/solaman-um-b4264427b" target="_blank" rel="noopener" class="project-link" aria-label="GitHub Repository">
+                                    <i data-lucide="github"></i> Code
+                                </a>
+                                <a href="https://lnkd.in/g8vgKG-G" target="_blank" rel="noopener" class="project-link" aria-label="Live Demo">
+                                    <i data-lucide="external-link"></i> Demo
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 1: Breast Cancer Prediction -->
+                    <article class="project-card fade-in-up" data-category="ml">
+                        <div class="project-img-placeholder gradient-project-1">
+                            <i data-lucide="activity" class="project-icon-bg"></i>
+                            <div class="project-badge">Machine Learning</div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Breast Cancer Prediction Web App</h3>
+                            <p class="project-summary">Enhanced a classification model with 85% accuracy using clinical data from 500+ patients and deployed it with Flask.</p>
+                            
+                            <ul class="project-points">
+                                <li>Implemented Flask API interface enabling real-time diagnostic predictions with a 95% user satisfaction rating.</li>
+                                <li>Integrated data preprocessing pipelines, optimizing loading and visualization processes by 40%.</li>
+                            </ul>
+                            
+                            <div class="project-tags">
+                                <span>Python</span>
+                                <span>Flask</span>
+                                <span>Scikit-learn</span>
+                                <span>Pandas</span>
+                                <span>HTML/CSS</span>
+                            </div>
+                            
+                            <div class="project-links">
+                                <a href="https://github.com/solaman-um-b4264427b" target="_blank" rel="noopener" class="project-link" aria-label="GitHub Repository">
+                                    <i data-lucide="github"></i> Code
+                                </a>
+                                <a href="#" class="project-link disabled" onclick="return false;" aria-label="Live Demo Unavailable">
+                                    <i data-lucide="external-link"></i> Demo
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 2: Book Recommending Chatbot -->
+                    <article class="project-card fade-in-up delay-100" data-category="ml">
+                        <div class="project-img-placeholder gradient-project-2">
+                            <i data-lucide="message-square" class="project-icon-bg"></i>
+                            <div class="project-badge">NLP / Chatbot</div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">RASA Book Recommending Chatbot</h3>
+                            <p class="project-summary">Developed an automated conversational agent using the Rasa framework to assist users in selecting and reviewing books.</p>
+                            
+                            <ul class="project-points">
+                                <li>Designed intents (ask_book_recommendation, ask_user_reviews) and custom actions to output contextual suggestions.</li>
+                                <li>Configured slots, entities, and forms to extract user preferences, with a fully interactive web messaging interface.</li>
+                            </ul>
+                            
+                            <div class="project-tags">
+                                <span>Rasa NLU</span>
+                                <span>Python</span>
+                                <span>JSON APIs</span>
+                                <span>JavaScript</span>
+                            </div>
+                            
+                            <div class="project-links">
+                                <a href="https://github.com/solaman-um-b4264427b" target="_blank" rel="noopener" class="project-link" aria-label="GitHub Repository">
+                                    <i data-lucide="github"></i> Code
+                                </a>
+                                <a href="#" class="project-link disabled" onclick="return false;">
+                                    <i data-lucide="external-link"></i> Demo
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 3: Spotify Explicit Content Analysis -->
+                    <article class="project-card fade-in-up delay-200" data-category="ml">
+                        <div class="project-img-placeholder gradient-project-3">
+                            <i data-lucide="music" class="project-icon-bg"></i>
+                            <div class="project-badge">NLP & Analytics</div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Spotify Explicit Lyrics Analysis</h3>
+                            <p class="project-summary">Preprocessed and analyzed over 10,000 song lyrics using Natural Language Processing techniques to predict track popularity.</p>
+                            
+                            <ul class="project-points">
+                                <li>Engineered NLP pipelines using tokenization, stopword removal, and lemmatization for feature extraction.</li>
+                                <li>Achieved 82% classification accuracy matching emotional sentiments and explicit markers against global rating indexes.</li>
+                            </ul>
+                            
+                            <div class="project-tags">
+                                <span>Python</span>
+                                <span>NLP</span>
+                                <span>NLTK / SpaCy</span>
+                                <span>Scikit-learn</span>
+                                <span>Pandas</span>
+                            </div>
+                            
+                            <div class="project-links">
+                                <a href="https://github.com/solaman-um-b4264427b" target="_blank" rel="noopener" class="project-link" aria-label="GitHub Repository">
+                                    <i data-lucide="github"></i> Code
+                                </a>
+                                <a href="#" class="project-link disabled" onclick="return false;">
+                                    <i data-lucide="external-link"></i> Demo
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 4: Hot Wheels E-commerce -->
+                    <article class="project-card fade-in-up" data-category="web">
+                        <div class="project-img-placeholder gradient-project-4">
+                            <i data-lucide="shopping-bag" class="project-icon-bg"></i>
+                            <div class="project-badge">Django Web App</div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Hot Wheels E-Commerce Platform</h3>
+                            <p class="project-summary">Built a Django-based online marketplace for collectible toy cars, integrating catalog browsing, cart actions, and checkouts.</p>
+                            
+                            <ul class="project-points">
+                                <li>Developed clean CRUD operations, Django session-based shopping cart management, and user authentication modules.</li>
+                                <li>Engineered a custom administrator dashboard to update product inventories, monitor stock logs, and track sales metrics.</li>
+                            </ul>
+                            
+                            <div class="project-tags">
+                                <span>Python</span>
+                                <span>Django</span>
+                                <span>SQLite</span>
+                                <span>HTML5/CSS3</span>
+                                <span>Bootstrap</span>
+                            </div>
+                            
+                            <div class="project-links">
+                                <a href="https://github.com/solaman-um-b4264427b" target="_blank" rel="noopener" class="project-link" aria-label="GitHub Repository">
+                                    <i data-lucide="github"></i> Code
+                                </a>
+                                <a href="#" class="project-link disabled" onclick="return false;">
+                                    <i data-lucide="external-link"></i> Demo
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 5: Play Store Analysis -->
+                    <article class="project-card fade-in-up delay-100" data-category="analytics">
+                        <div class="project-img-placeholder gradient-project-5">
+                            <i data-lucide="pie-chart" class="project-icon-bg"></i>
+                            <div class="project-badge">Business Intelligence</div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Play Store Apps Download Analysis</h3>
+                            <p class="project-summary">Conducted descriptive and predictive diagnostic analyses on 1M+ Google Play Store records via custom Power BI reports.</p>
+                            
+                            <ul class="project-points">
+                                <li>Isolated key ranking parameters driving user installations, resulting in a 20% improvement in targeted app marketing strategies.</li>
+                                <li>Designed interactive cross-filtering dashboards highlighting metrics on sizing, pricing, and category performance.</li>
+                            </ul>
+                            
+                            <div class="project-tags">
+                                <span>Power BI</span>
+                                <span>DAX</span>
+                                <span>Data Modeling</span>
+                                <span>Excel</span>
+                                <span>SQL</span>
+                            </div>
+                            
+                            <div class="project-links">
+                                <a href="https://linkedin.com/in/solaman-um-b4264427b" target="_blank" rel="noopener" class="project-link">
+                                    <i data-lucide="linkedin"></i> View Details
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 6: College Canteen System -->
+                    <article class="project-card fade-in-up delay-200" data-category="web">
+                        <div class="project-img-placeholder gradient-project-6">
+                            <i data-lucide="coffee" class="project-icon-bg"></i>
+                            <div class="project-badge">Full Stack System</div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Digital College Canteen Manager</h3>
+                            <p class="project-summary">Created an online dining manager system that enables easy booking of food items, streamlining canteen access for all users.</p>
+                            
+                            <ul class="project-points">
+                                <li>Developed pre-booking capabilities to reduce long on-site lines and manage kitchen inventories.</li>
+                                <li>Integrated centralized logs to generate reports on daily demand, waste metrics, and peak transaction hours.</li>
+                            </ul>
+                            
+                            <div class="project-tags">
+                                <span>React.js</span>
+                                <span>Node.js</span>
+                                <span>SQL</span>
+                                <span>Express</span>
+                                <span>CSS Modules</span>
+                            </div>
+                            
+                            <div class="project-links">
+                                <a href="https://github.com/solaman-um-b4264427b" target="_blank" rel="noopener" class="project-link" aria-label="GitHub Repository">
+                                    <i data-lucide="github"></i> Code
+                                </a>
+                                <a href="#" class="project-link disabled" onclick="return false;">
+                                    <i data-lucide="external-link"></i> Demo
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="certifications-section section-padding bg-alt">
+            <div class="container">
+                <div class="section-title-wrapper fade-in-up">
+                    <span class="section-subtitle">Credentials</span>
+                    <h2 class="section-title">Certifications & Training</h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="certifications-grid">
+                    <!-- IIT Bombay Python -->
+                    <div class="cert-card fade-in-up">
+                        <div class="cert-icon-box">
+                            <i data-lucide="award" class="cert-icon"></i>
+                        </div>
+                        <div class="cert-body">
+                            <h4>Python Programming</h4>
+                            <p class="cert-issuer">IIT Bombay (via EduPyramids)</p>
+                            <span class="cert-date">Issued: 2024</span>
+                        </div>
+                    </div>
+
+                    <!-- Cloud Computing NPTEL -->
+                    <div class="cert-card fade-in-up delay-50">
+                        <div class="cert-icon-box">
+                            <i data-lucide="cloud" class="cert-icon"></i>
+                        </div>
+                        <div class="cert-body">
+                            <h4>Cloud Computing</h4>
+                            <p class="cert-issuer">NPTEL / SWAYAM</p>
+                            <span class="cert-date">National Coordination</span>
+                        </div>
+                    </div>
+
+                    <!-- IBM Data Analytics -->
+                    <div class="cert-card fade-in-up delay-100">
+                        <div class="cert-icon-box">
+                            <i data-lucide="binary" class="cert-icon"></i>
+                        </div>
+                        <div class="cert-body">
+                            <h4>Data Analytics Certificate</h4>
+                            <p class="cert-issuer">IBM Professional</p>
+                            <span class="cert-date">Data Mining & Wrangling</span>
+                        </div>
+                    </div>
+
+                    <!-- Full Stack Intro Django -->
+                    <div class="cert-card fade-in-up delay-150">
+                        <div class="cert-icon-box">
+                            <i data-lucide="server" class="cert-icon"></i>
+                        </div>
+                        <div class="cert-body">
+                            <h4>Introduction to Full Stack Web Development</h4>
+                            <p class="cert-issuer">Python & Django Specialist</p>
+                            <span class="cert-date">Backend Integration</span>
+                        </div>
+                    </div>
+
+                    <!-- Bigdata Analytics & Data Science -->
+                    <div class="cert-card fade-in-up delay-200">
+                        <div class="cert-icon-box">
+                            <i data-lucide="database" class="cert-icon"></i>
+                        </div>
+                        <div class="cert-body">
+                            <h4>Bigdata Analytics and Data Science</h4>
+                            <p class="cert-issuer">National Council for Technology & Training</p>
+                            <span class="cert-date">Corporate Training</span>
+                        </div>
+                    </div>
+
+                    <!-- SQL Basic -->
+                    <div class="cert-card fade-in-up delay-250">
+                        <div class="cert-icon-box">
+                            <i data-lucide="key-round" class="cert-icon"></i>
+                        </div>
+                        <div class="cert-body">
+                            <h4>SQL (Basic)</h4>
+                            <p class="cert-issuer">Relational Database Queries</p>
+                            <span class="cert-date">Schema Design & Indexing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Real Rails Internship Achievement -->
+                <div class="real-rails-showcase fade-in-up">
+                    <div class="rr-header">
+                        <div class="rr-badge-row">
+                            <span class="rr-badge">🎓 Internship Completion</span>
+                            <span class="rr-date">2025 · Infocreon Solutions Pvt. Ltd.</span>
+                        </div>
+                        <div class="rr-title-row">
+                            <i data-lucide="trophy" class="rr-trophy-icon"></i>
+                            <div>
+                                <h3>Real Rails Internship Program</h3>
+                                <p>Successfully completed an industry-grade engineering internship — moving products from <strong>idea → development → testing → cloud deployment</strong> following Spec-Driven Development practices.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="rr-body">
+                        <div class="rr-skills-col">
+                            <h4 class="rr-col-title"><i data-lucide="layers"></i> Technologies Mastered</h4>
+                            <ul class="rr-skills-list">
+                                <li><i data-lucide="check-circle-2"></i> Next.js, TypeScript &amp; Tailwind CSS</li>
+                                <li><i data-lucide="check-circle-2"></i> FastAPI Backend Development</li>
+                                <li><i data-lucide="check-circle-2"></i> Data Visualization &amp; Dashboard Engineering</li>
+                                <li><i data-lucide="check-circle-2"></i> Docker Containerization</li>
+                                <li><i data-lucide="check-circle-2"></i> Azure Container Apps (Cloud Deployment)</li>
+                                <li><i data-lucide="check-circle-2"></i> Spec-Driven Development Methodology</li>
+                                <li><i data-lucide="check-circle-2"></i> Selenium Automation Testing</li>
+                                <li><i data-lucide="check-circle-2"></i> Introduction to Agentic AI Concepts</li>
+                            </ul>
+                        </div>
+
+                        <div class="rr-projects-col">
+                            <h4 class="rr-col-title"><i data-lucide="rocket"></i> Deployed Projects</h4>
+                            <a href="https://lnkd.in/g8vgKG-G" target="_blank" rel="noopener" class="rr-project-card">
+                                <div class="rr-project-icon" style="background: linear-gradient(135deg,#6366f1,#06b6d4);">
+                                    <i data-lucide="navigation"></i>
+                                </div>
+                                <div class="rr-project-info">
+                                    <span class="rr-project-name">POC 42 · Mobile Ad Journey</span>
+                                    <span class="rr-project-stack">Next.js · FastAPI · Docker · Azure</span>
+                                </div>
+                                <i data-lucide="external-link" class="rr-ext-icon"></i>
+                            </a>
+                            <a href="https://lnkd.in/gmwh8nF4" target="_blank" rel="noopener" class="rr-project-card">
+                                <div class="rr-project-icon" style="background: linear-gradient(135deg,#f59e0b,#ef4444);">
+                                    <i data-lucide="pie-chart"></i>
+                                </div>
+                                <div class="rr-project-info">
+                                    <span class="rr-project-name">POC 46 · Creator Distribution Funnel</span>
+                                    <span class="rr-project-stack">Next.js · FastAPI · Docker · Azure</span>
+                                </div>
+                                <i data-lucide="external-link" class="rr-ext-icon"></i>
+                            </a>
+
+                            <div class="rr-footer-links">
+                                <a href="https://lnkd.in/gKkWWT-n" target="_blank" rel="noopener" class="rr-verify-btn">
+                                    <i data-lucide="badge-check"></i> View Certificate
+                                </a>
+                                <a href="https://linkedin.com/in/solaman-um-b4264427b" target="_blank" rel="noopener" class="rr-verify-btn rr-li-btn">
+                                    <i data-lucide="linkedin"></i> LinkedIn Post
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Infosys Springboard Sub-Section -->
+                <div class="springboard-showcase fade-in-up">
+                    <div class="springboard-header">
+                        <i data-lucide="check-square" class="springboard-icon"></i>
+                        <div>
+                            <h3>Infosys Springboard Accreditations</h3>
+                            <p>Completed intensive training paths covering fundamental engineering concepts:</p>
+                        </div>
+                    </div>
+                    <div class="springboard-chips-container">
+                        <span class="springboard-chip">Business Intelligence</span>
+                        <span class="springboard-chip">ER Modeling</span>
+                        <span class="springboard-chip">Multidimensional Data Modeling</span>
+                        <span class="springboard-chip">Agile Software Development</span>
+                        <span class="springboard-chip">Microsoft Power BI</span>
+                        <span class="springboard-chip">Advanced Excel Analytics</span>
+                        <span class="springboard-chip">Data Science Fundamentals</span>
+                        <span class="springboard-chip">Cloud Technologies</span>
+                        <span class="springboard-chip">Big Data Architecture</span>
+                        <span class="springboard-chip">Software Engineering Principles</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resume Section -->
+        <section id="resume-section" class="resume-section-preview section-padding">
+            <div class="container">
+                <div class="section-title-wrapper fade-in-up">
+                    <span class="section-subtitle">Education & Timeline</span>
+                    <h2 class="section-title">Academic & Resume Details</h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="resume-preview-container fade-in-up">
+                    <div class="resume-preview-sidebar">
+                        <div class="preview-avatar">S</div>
+                        <h3>Solaman U M</h3>
+                        <p class="preview-role">Frontend Developer & Data Analyst</p>
+                        
+                        <div class="preview-contact-info">
+                            <div class="p-info-item">
+                                <i data-lucide="mail"></i>
+                                <span>solamanum@gmail.com</span>
+                            </div>
+                            <div class="p-info-item">
+                                <i data-lucide="phone"></i>
+                                <span>+91-9526127632</span>
+                            </div>
+                            <div class="p-info-item">
+                                <i data-lucide="map-pin"></i>
+                                <span>Thrissur, Kerala, India</span>
+                            </div>
+                        </div>
+
+                        <a href="resume.html" target="_blank" class="btn btn-md btn-gradient btn-full">
+                            <i data-lucide="printer"></i>
+                            <span>Print / Save Resume</span>
+                        </a>
+                    </div>
+
+                    <div class="resume-preview-main">
+                        <div class="preview-section">
+                            <h4 class="preview-section-title"><i data-lucide="graduation-cap"></i> Education</h4>
+                            <div class="timeline-block">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-header">
+                                    <h5>Master of Computer Applications (MCA)</h5>
+                                    <span class="timeline-date">2024 – 2026</span>
+                                </div>
+                                <p class="timeline-sub">Nehru College of Engineering And Research Centre</p>
+                                <p class="timeline-desc">Pursuing master's program. Focusing on software engineering, web application architectures, machine learning workflows, and cloud database implementations.</p>
+                            </div>
+                        </div>
+
+                        <div class="preview-section">
+                            <h4 class="preview-section-title"><i data-lucide="target"></i> Objective Summary</h4>
+                            <p class="preview-text">
+                                Frontend Developer and MCA scholar dedicated to designing and implementing highly responsive, scalable, and visually premium user interfaces using React.js, HTML, and CSS. Experienced data analyst leveraging Power BI dashboards and supervised/unsupervised machine learning models to synthesize insights and drive critical outcomes.
+                            </p>
+                        </div>
+
+                        <div class="preview-section">
+                            <h4 class="preview-section-title"><i data-lucide="star"></i> Technical Highlights</h4>
+                            <div class="quick-highlights-grid">
+                                <div>
+                                    <strong>Languages:</strong> C++, Python, SQL, HTML/CSS
+                                </div>
+                                <div>
+                                    <strong>Frameworks:</strong> React.js, Django, Flask, Bootstrap
+                                </div>
+                                <div>
+                                    <strong>Analytics:</strong> Power BI, Pandas, Scikit-learn, Excel
+                                </div>
+                                <div>
+                                    <strong>Workflow:</strong> Git/GitHub, Agile, ER Modeling
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section section-padding bg-alt">
+            <div class="container">
+                <div class="section-title-wrapper fade-in-up">
+                    <span class="section-subtitle">Get In Touch</span>
+                    <h2 class="section-title">Contact Me</h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-info-column fade-in-up">
+                        <h3>Let's collaborate on your next project</h3>
+                        <p class="contact-intro-text">
+                            I am open to internships, junior developer roles, and freelance collaborations. Drop me a line and I'll get back to you within 24 hours.
+                        </p>
+
+                        <div class="contact-links-list">
+                            <!-- Email -->
+                            <div class="contact-card-item">
+                                <div class="contact-icon-wrapper">
+                                    <i data-lucide="mail"></i>
+                                </div>
+                                <div class="contact-card-content">
+                                    <span>Email Me</span>
+                                    <a href="mailto:solamanum@gmail.com">solamanum@gmail.com</a>
+                                </div>
+                            </div>
+
+                            <!-- Phone -->
+                            <div class="contact-card-item">
+                                <div class="contact-icon-wrapper">
+                                    <i data-lucide="phone"></i>
+                                </div>
+                                <div class="contact-card-content">
+                                    <span>Call/Text</span>
+                                    <a href="tel:+919526127632">+91 9526127632</a>
+                                </div>
+                            </div>
+
+                            <!-- LinkedIn -->
+                            <div class="contact-card-item">
+                                <div class="contact-icon-wrapper">
+                                    <i data-lucide="linkedin"></i>
+                                </div>
+                                <div class="contact-card-content">
+                                    <span>LinkedIn</span>
+                                    <a href="https://linkedin.com/in/solaman-um-b4264427b" target="_blank" rel="noopener">linkedin.com/in/solaman-um-b4264427b</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-column fade-in-up delay-200">
+                        <form id="contact-form" class="contact-form">
+                            <div class="form-group-row">
+                                <div class="form-group">
+                                    <label for="name">Your Name</label>
+                                    <input type="text" id="name" name="name" placeholder="John Doe" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" placeholder="Project Collaboration Opportunity" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Your Message</label>
+                                <textarea id="message" name="message" rows="5" placeholder="Describe your project, timeline, and goals..." required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-lg btn-gradient btn-full" id="submit-btn">
+                                <span>Send Message</span>
+                                <i data-lucide="send" class="icon-sm"></i>
+                            </button>
+                            
+                            <div class="form-feedback hidden" id="form-feedback"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="#" class="footer-logo">Solaman<span>.</span></a>
+                <p>Frontend Developer & Data Analyst. Crafting clean code and actionable insights.</p>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#certifications">Certifications</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-socials-column">
+                <h4>Connect</h4>
+                <div class="footer-social-icons">
+                    <a href="https://linkedin.com/in/solaman-um-b4264427b" target="_blank" rel="noopener" aria-label="LinkedIn">
+                        <i data-lucide="linkedin"></i>
+                    </a>
+                    <a href="mailto:solamanum@gmail.com" aria-label="Email">
+                        <i data-lucide="mail"></i>
+                    </a>
+                    <a href="https://github.com/solaman-um-b4264427b" target="_blank" rel="noopener" aria-label="GitHub">
+                        <i data-lucide="github"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container footer-bottom-container">
+                <p>&copy; 2026 Solaman U M. All rights reserved.</p>
+                <p>Designed for recruiters and technical managers.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Hire CTA -->
+    <a href="#contact" class="floating-hire-btn" id="floating-hire" aria-label="Hire Me">
+        <i data-lucide="zap"></i>
+        <span>Hire Me</span>
+    </a>
+
+    <!-- Script JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

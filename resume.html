@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume | Solaman U M - Frontend Developer & Data Analyst</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        :root {
+            --font-primary: 'Inter', sans-serif;
+            --font-heading: 'Outfit', sans-serif;
+            
+            --bg-page: #f8fafc;
+            --bg-card: #ffffff;
+            --text-main: #1e293b;
+            --text-light: #64748b;
+            --accent: #4f46e5;
+            --border: #e2e8f0;
+            --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-page);
+            color: var(--text-main);
+            font-family: var(--font-primary);
+            line-height: 1.5;
+            padding: 40px 0;
+        }
+
+        .controls-nav {
+            max-width: 800px;
+            margin: 0 auto 30px auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            font-family: var(--font-heading);
+            font-weight: 600;
+            font-size: 0.9rem;
+            border-radius: 6px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            border: 1px solid var(--border);
+            background: var(--bg-card);
+            color: var(--text-main);
+        }
+
+        .btn:hover {
+            background-color: #f1f5f9;
+            transform: translateY(-1px);
+        }
+
+        .btn-primary {
+            background-color: var(--accent);
+            color: #ffffff;
+            border-color: var(--accent);
+            box-shadow: 0 4px 10px rgba(79, 70, 229, 0.25);
+        }
+
+        .btn-primary:hover {
+            background-color: #4338ca;
+            color: #ffffff;
+        }
+
+        .resume-paper {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 50px;
+            box-shadow: var(--shadow);
+        }
+
+        /* Header Layout */
+        .resume-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            border-bottom: 2px solid var(--text-main);
+            padding-bottom: 25px;
+            margin-bottom: 25px;
+        }
+
+        .header-left h1 {
+            font-family: var(--font-heading);
+            font-size: 2.25rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 4px;
+            letter-spacing: -0.02em;
+        }
+
+        .header-left p {
+            font-size: 1.1rem;
+            color: var(--accent);
+            font-weight: 600;
+            font-family: var(--font-heading);
+        }
+
+        .header-right {
+            text-align: right;
+            font-size: 0.875rem;
+            color: var(--text-light);
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .contact-link {
+            color: var(--text-light);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 6px;
+        }
+
+        .contact-link:hover {
+            color: var(--accent);
+        }
+
+        /* Section Layout */
+        .resume-section {
+            margin-bottom: 25px;
+        }
+
+        .section-title {
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-main);
+            border-bottom: 1.5px solid var(--border);
+            padding-bottom: 6px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .section-title i {
+            color: var(--accent);
+            width: 18px;
+            height: 18px;
+        }
+
+        .objective-text {
+            font-size: 0.95rem;
+            color: #334155;
+            line-height: 1.6;
+        }
+
+        /* Education & Experience Blocks */
+        .resume-block {
+            margin-bottom: 20px;
+        }
+
+        .resume-block:last-child {
+            margin-bottom: 0;
+        }
+
+        .block-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 4px;
+        }
+
+        .block-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .block-date {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--accent);
+        }
+
+        .block-subtitle {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            font-style: italic;
+            margin-bottom: 8px;
+        }
+
+        .block-bullets {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .block-bullets li {
+            position: relative;
+            padding-left: 16px;
+            font-size: 0.9rem;
+            color: #334155;
+            margin-bottom: 6px;
+        }
+
+        .block-bullets li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        /* Skills Layout */
+        .skills-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .skills-table td {
+            padding: 8px 12px;
+            vertical-align: top;
+            font-size: 0.9rem;
+        }
+
+        .skills-table tr {
+            border-bottom: 1px solid var(--border);
+        }
+
+        .skills-table tr:last-child {
+            border-bottom: none;
+        }
+
+        .skills-cat-title {
+            font-weight: 700;
+            width: 30%;
+            color: var(--text-main);
+        }
+
+        .skills-cat-list {
+            color: #334155;
+        }
+
+        /* Certifications Grid */
+        .certs-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            list-style-type: none;
+        }
+
+        .certs-list li {
+            position: relative;
+            padding-left: 16px;
+            font-size: 0.85rem;
+            color: #334155;
+        }
+
+        .certs-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #10b981;
+            font-weight: bold;
+        }
+
+        /* Springboard List */
+        .springboard-section {
+            margin-top: 12px;
+            padding: 12px;
+            background-color: #f8fafc;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+        }
+        
+        .springboard-title {
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-light);
+            margin-bottom: 8px;
+        }
+
+        .springboard-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 6px 12px;
+            font-size: 0.75rem;
+            color: #475569;
+        }
+
+        /* Print Media Styles */
+        @media print {
+            body {
+                background: #ffffff;
+                padding: 0;
+            }
+
+            .controls-nav {
+                display: none;
+            }
+
+            .resume-paper {
+                border: none;
+                box-shadow: none;
+                padding: 0;
+                margin: 0;
+                width: 100%;
+            }
+
+            .certs-list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .springboard-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 20px 0;
+            }
+
+            .resume-paper {
+                padding: 30px 20px;
+            }
+
+            .resume-header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .header-right {
+                text-align: left;
+                align-items: flex-start;
+            }
+
+            .certs-list {
+                grid-template-columns: 1fr;
+            }
+
+            .springboard-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="controls-nav">
+        <a href="index.html" class="btn">
+            <i data-lucide="arrow-left" style="width: 16px; height: 16px;"></i>
+            <span>Back to Portfolio</span>
+        </a>
+        <button class="btn btn-primary" onclick="window.print()">
+            <i data-lucide="printer" style="width: 16px; height: 16px;"></i>
+            <span>Download PDF / Print</span>
+        </button>
+    </nav>
+
+    <div class="resume-paper">
+        <!-- Header -->
+        <header class="resume-header">
+            <div class="header-left">
+                <h1>Solaman U M</h1>
+                <p>Frontend Developer & Data Analyst</p>
+            </div>
+            <div class="header-right">
+                <a href="mailto:solamanum@gmail.com" class="contact-link">
+                    <span>solamanum@gmail.com</span>
+                    <i data-lucide="mail" style="width: 14px; height: 14px;"></i>
+                </a>
+                <a href="tel:+919526127632" class="contact-link">
+                    <span>+91-9526127632</span>
+                    <i data-lucide="phone" style="width: 14px; height: 14px;"></i>
+                </a>
+                <a href="https://linkedin.com/in/solaman-um-b4264427b" target="_blank" rel="noopener" class="contact-link">
+                    <span>linkedin.com/in/solaman-um-b4264427b</span>
+                    <i data-lucide="linkedin" style="width: 14px; height: 14px;"></i>
+                </a>
+                <span class="contact-link">
+                    <span>Thrissur, Kerala, India</span>
+                    <i data-lucide="map-pin" style="width: 14px; height: 14px;"></i>
+                </span>
+            </div>
+        </header>
+
+        <!-- Objective -->
+        <section class="resume-section">
+            <h2 class="section-title"><i data-lucide="target"></i> Objective</h2>
+            <p class="objective-text">
+                Frontend Developer with experience in HTML, CSS, and React.js, dedicated to designing and implementing responsive and scalable user interfaces. Data analyst with experience in Power BI, Supervised & Unsupervised Learning Algorithms in Colab, committed to leveraging analytical frameworks to optimize business processes and visual insights.
+            </p>
+        </section>
+
+        <!-- Education -->
+        <section class="resume-section">
+            <h2 class="section-title"><i data-lucide="graduation-cap"></i> Education</h2>
+            <div class="resume-block">
+                <div class="block-header">
+                    <span class="block-title">Master of Computer Applications (MCA)</span>
+                    <span class="block-date">2024 – 2026</span>
+                </div>
+                <div class="block-subtitle">Nehru College of Engineering And Research Centre | Thrissur, India</div>
+                <ul class="block-bullets">
+                    <li>Pursuing postgraduate studies focusing on algorithms, database management systems, and advanced web development architectures.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section class="resume-section">
+            <h2 class="section-title"><i data-lucide="sliders"></i> Skills & Interests</h2>
+            <table class="skills-table">
+                <tr>
+                    <td class="skills-cat-title">Programming Languages</td>
+                    <td class="skills-cat-list">C++, Python, SQL</td>
+                </tr>
+                <tr>
+                    <td class="skills-cat-title">Frontend Technologies</td>
+                    <td class="skills-cat-list">HTML, CSS, React.js, Bootstrap, Django Templates</td>
+                </tr>
+                <tr>
+                    <td class="skills-cat-title">Backend & Database</td>
+                    <td class="skills-cat-list">Django, Flask, SQL (SQLite / MySQL)</td>
+                </tr>
+                <tr>
+                    <td class="skills-cat-title">Data Visualization</td>
+                    <td class="skills-cat-list">Power BI, Matplotlib, Seaborn, Excel</td>
+                </tr>
+                <tr>
+                    <td class="skills-cat-title">Soft Skills</td>
+                    <td class="skills-cat-list">Critical thinking, Data-driven decision making, Agile methodology</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Projects -->
+        <section class="resume-section">
+            <h2 class="section-title"><i data-lucide="folder-git-2"></i> Selected Projects</h2>
+            
+            <!-- Breast Cancer -->
+            <div class="resume-block">
+                <div class="block-header">
+                    <span class="block-title">Breast Cancer Prediction Model (Classification Model)</span>
+                    <span class="block-date">Python, Flask, Scikit-learn</span>
+                </div>
+                <ul class="block-bullets">
+                    <li>Enhanced a machine learning model with 85% accuracy to predict breast cancer outcomes using clinical data from over 500 patients.</li>
+                    <li>Designed and implemented a web application using Flask, enabling users to input parameters and receive diagnostic predictions in real-time, achieving a 95% user satisfaction rating.</li>
+                    <li>Integrated data preprocessing and visualization techniques that improved raw data processing time by 40%.</li>
+                </ul>
+            </div>
+
+            <!-- Book Bot -->
+            <div class="resume-block">
+                <div class="block-header">
+                    <span class="block-title">Book Recommending Chatbot</span>
+                    <span class="block-date">Rasa NLU, Python</span>
+                </div>
+                <ul class="block-bullets">
+                    <li>Developed a Rasa conversational agent to recommend books, provide descriptions, and mock virtual bookstall features.</li>
+                    <li>Configured entities and slots to capture user inputs, writing custom actions to output contextual suggestions.</li>
+                </ul>
+            </div>
+
+            <!-- Hot Wheels -->
+            <div class="resume-block">
+                <div class="block-header">
+                    <span class="block-title">Hot Wheels E-commerce Project</span>
+                    <span class="block-date">Django, SQLite, Bootstrap</span>
+                </div>
+                <ul class="block-bullets">
+                    <li>Developed a Django e-commerce platform for toy cars, including catalog browsing, cart operations, and order checkouts.</li>
+                    <li>Designed admin dashboard features to manage stock listings, log order statuses, and view user audit logs.</li>
+                </ul>
+            </div>
+
+            <!-- Spotify Lyrics -->
+            <div class="resume-block">
+                <div class="block-header">
+                    <span class="block-title">Spotify Explicit Content Analysis (NLP)</span>
+                    <span class="block-date">NLP, Sentiment Analysis, Pandas</span>
+                </div>
+                <ul class="block-bullets">
+                    <li>Preprocessed over 10,000 lyrics using tokenization, stopword removal, and lemmatization for feature extraction.</li>
+                    <li>Applied sentiment analysis and emotion classification, achieving 82% accuracy in predicting track popularity indexes.</li>
+                </ul>
+            </div>
+
+            <!-- Play Store -->
+            <div class="resume-block">
+                <div class="block-header">
+                    <span class="block-title">Play Store App Ratings & Downloads Analysis</span>
+                    <span class="block-date">Power BI, Excel, Data Modeling</span>
+                </div>
+                <ul class="block-bullets">
+                    <li>Analyzed over 1 million Play Store records using Power BI, identifying top 5 factors contributing to app ratings and installations.</li>
+                    <li>Synthesized findings into interactive dashboards, providing recommendations that led to a 20% marketing efficiency improvement.</li>
+                </ul>
+            </div>
+
+            <!-- Canteen -->
+            <div class="resume-block">
+                <div class="block-header">
+                    <span class="block-title">Digital College Canteen Management System</span>
+                    <span class="block-date">Full Stack Web Development</span>
+                </div>
+                <ul class="block-bullets">
+                    <li>Created an online booking portal to pre-book meals, reducing on-site queues and structuring backend food logistics.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Certifications -->
+        <section class="resume-section">
+            <h2 class="section-title"><i data-lucide="award"></i> Certifications</h2>
+            <ul class="certs-list">
+                <li>Python Programming (IIT Bombay - via EduPyramids)</li>
+                <li>SQL (Basic Queries & Schema Design)</li>
+                <li>Python Django: Intro to Full Stack Web Development</li>
+                <li>Bigdata Analytics and Data Science (NCTT)</li>
+                <li>Cloud Computing (NPTEL)</li>
+                <li>Data Analytics (IBM Professional Certification)</li>
+            </ul>
+
+            <div class="springboard-section">
+                <div class="springboard-title">Infosys Springboard Training Tracks</div>
+                <div class="springboard-grid">
+                    <div>• Business Intelligence</div>
+                    <div>• ER Modeling</div>
+                    <div>• Multidimensional Data</div>
+                    <div>• Power BI Visualization</div>
+                    <div>• Agile & Software Eng.</div>
+                    <div>• Excel Analytics</div>
+                    <div>• Data Science Intro</div>
+                    <div>• Cloud Technologies</div>
+                    <div>• Big Data Architectures</div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Initialize Lucide Icons for control bar and paper
+        lucide.createIcons();
+    </script>
+</body>
+</html>
