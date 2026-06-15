@@ -251,23 +251,59 @@ function initContactForm() {
   form.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    // Simulate submission
     const originalText = submitBtn.innerHTML;
     submitBtn.innerHTML = '<span>Sending...</span>';
     submitBtn.disabled = true;
 
-    setTimeout(() => {
-      form.reset();
+    const formData = new FormData(form);
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    if (feedback) {
+      feedback.classList.add('hidden');
+    }
+
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: json
+    })
+    .then(async (response) => {
+      let jsonResponse = await response.json();
+      if (response.status === 200) {
+        form.reset();
+        if (feedback) {
+          feedback.className = 'form-feedback success';
+          feedback.textContent = '✓ Message sent! I\'ll respond within 24 hours.';
+          feedback.classList.remove('hidden');
+        }
+      } else {
+        console.error(jsonResponse);
+        if (feedback) {
+          feedback.className = 'form-feedback error';
+          feedback.textContent = jsonResponse.message || 'Error sending message.';
+          feedback.classList.remove('hidden');
+        }
+      }
+    })
+    .catch(error => {
+      console.error(error);
+      if (feedback) {
+        feedback.className = 'form-feedback error';
+        feedback.textContent = 'Something went wrong. Please try again later.';
+        feedback.classList.remove('hidden');
+      }
+    })
+    .then(() => {
       submitBtn.innerHTML = originalText;
       submitBtn.disabled = false;
-
       if (feedback) {
-        feedback.className = 'form-feedback success';
-        feedback.textContent = '✓ Message sent! I\'ll respond within 24 hours.';
-        feedback.classList.remove('hidden');
-        setTimeout(() => feedback.classList.add('hidden'), 5000);
+        setTimeout(() => feedback.classList.add('hidden'), 6000);
       }
-    }, 1800);
+    });
   });
 }
 
