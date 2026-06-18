@@ -3,15 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solaman U M | Frontend Developer & Data Analyst</title>
-    <meta name="description" content="Portfolio of Solaman U M — Frontend Developer & Data Analyst specializing in React, Python, Django, ML, and Power BI. Available for internships, roles and collaborations.">
+    <title>Solaman U M | Frontend Developer &amp; Data Analyst</title>
+    <meta name="description" content="Portfolio of Solaman U M — Frontend Developer &amp; Data Analyst specializing in React, Python, Django, ML, and Power BI. Available for internships, roles and collaborations.">
     <meta name="keywords" content="Solaman U M, Frontend Developer, Data Analyst, React, Python, Django, Power BI, Machine Learning, MCA, Kerala, India">
     <meta name="author" content="Solaman U M">
+    <link rel="canonical" href="https://solaman-portfolio.vercel.app/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Solaman U M | Frontend Developer &amp; Data Analyst">
+    <meta property="og:description" content="Frontend Developer &amp; Data Analyst who ships production-ready web apps, ML-powered dashboards, and pixel-perfect UIs.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://solaman-portfolio.vercel.app/">
+    <meta property="og:image" content="https://solaman-portfolio.vercel.app/profile.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Solaman U M | Frontend Developer &amp; Data Analyst">
+    <meta name="twitter:description" content="Frontend Developer &amp; Data Analyst who ships production-ready web apps, ML-powered dashboards, and pixel-perfect UIs.">
+    <meta name="twitter:image" content="https://solaman-portfolio.vercel.app/profile.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23111110'/><text x='16' y='22' text-anchor='middle' font-family='sans-serif' font-weight='bold' font-size='18' fill='%23D4A843'>S.</text></svg>">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Solaman U M",
+      "jobTitle": "Frontend Developer & Data Analyst",
+      "email": "solamanum@gmail.com",
+      "telephone": "+91-9526127632",
+      "url": "https://solaman-portfolio.vercel.app/",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Thrissur",
+        "addressRegion": "Kerala",
+        "addressCountry": "IN"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/solaman-um-b4264427b/",
+        "https://github.com/SOLAMANum"
+      ],
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Nehru College of Engineering & Research Centre"
+      },
+      "knowsAbout": ["React", "Next.js", "Python", "Django", "FastAPI", "Docker", "Azure", "Power BI", "Machine Learning", "NLP"]
+    }
+    </script>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
@@ -21,6 +66,17 @@
 </head>
 <body>
 
+    <!-- Page Loader -->
+    <div class="page-loader" id="page-loader" aria-hidden="true">
+        <div class="loader-logo">S<span>.</span></div>
+        <div class="loader-bar"><div class="loader-bar-fill" id="loader-bar-fill"></div></div>
+    </div>
+
+    <!-- Back to Top -->
+    <button class="back-top" id="back-top" aria-label="Back to top">
+        <i data-lucide="arrow-up"></i>
+    </button>
+
     <!-- Custom Cursor -->
     <div class="cursor-dot" id="cursor-dot"></div>
     <div class="cursor-ring" id="cursor-ring"></div>
@@ -29,301 +85,293 @@
     <div class="scroll-progress" id="scroll-progress"></div>
 
     <!-- ═══════════════════ NAVIGATION ═══════════════════ -->
-    <nav class="navbar" id="navbar">
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
         <div class="nav-inner">
-            <a href="#home" class="nav-logo">
+            <a href="#home" class="nav-logo" aria-label="Solaman UM Home">
                 Solaman<span class="logo-accent">.</span>
             </a>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="#services" class="nav-link">Services</a></li>
+            <ul class="nav-links" id="nav-links" role="list">
                 <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
-                <li><a href="#faq" class="nav-link">FAQs</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-            <a href="#contact" class="btn-book" id="book-btn">Book a call</a>
-            <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
+            <a href="resume.html" target="_blank" class="btn-hire" id="hire-btn" rel="noopener">
+                <i data-lucide="file-text"></i> Resume
+            </a>
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu" aria-expanded="false">
                 <i data-lucide="menu"></i>
             </button>
         </div>
         <!-- Mobile Menu -->
-        <div class="mobile-menu" id="mobile-menu">
-            <a href="#services" class="nav-link">Services</a>
-            <a href="#projects" class="nav-link">Projects</a>
-            <a href="#testimonials" class="nav-link">Testimonials</a>
-            <a href="#faq" class="nav-link">FAQs</a>
-            <a href="#contact" class="btn-book">Book a call</a>
+        <div class="mobile-menu" id="mobile-menu" role="menu">
+            <a href="#projects" class="nav-link" role="menuitem">Projects</a>
+            <a href="#about" class="nav-link" role="menuitem">About</a>
+            <a href="#skills" class="nav-link" role="menuitem">Skills</a>
+            <a href="#experience" class="nav-link" role="menuitem">Experience</a>
+            <a href="#contact" class="nav-link" role="menuitem">Contact</a>
+            <a href="resume.html" target="_blank" class="btn-hire" rel="noopener">
+                <i data-lucide="file-text"></i> Resume
+            </a>
         </div>
     </nav>
 
     <main>
 
         <!-- ═══════════════════ HERO ═══════════════════ -->
-        <section id="home" class="hero-section">
-            <!-- Ambient glow orbs -->
-            <div class="glow-orb glow-orb-1"></div>
-            <div class="glow-orb glow-orb-2"></div>
-            <div class="glow-orb glow-orb-3"></div>
+        <section id="home" class="hero-section" aria-label="Hero introduction">
+            <!-- Subtle ambient glows -->
+            <div class="glow-orb glow-1" aria-hidden="true"></div>
+            <div class="glow-orb glow-2" aria-hidden="true"></div>
+            <div class="grid-overlay" aria-hidden="true"></div>
 
             <div class="container hero-container">
-                <!-- Text Content (Visually Left on Desktop) -->
-                <div class="hero-left fade-in-up">
-                    <div class="hero-badge">
-                        <span class="pulse-dot"></span>
+                <!-- Text Content -->
+                <div class="hero-left">
+                    <div class="hero-badge" role="status">
+                        <span class="pulse-dot" aria-hidden="true"></span>
                         Open to Work &amp; Collaborations
                     </div>
+
                     <h1 class="hero-h1">
-                        Building <span class="text-gradient">Exceptional</span><br>
+                        Building <span class="text-accent typewriter-word" id="typewriter-word">Exceptional</span><span class="typewriter-cursor" aria-hidden="true"></span><br>
                         Digital Experiences
                     </h1>
+
                     <p class="hero-desc">
-                        I'm <strong>Solaman U M</strong> — a Frontend Developer &amp; Data Analyst who ships production-ready web apps, ML-powered dashboards, and pixel-perfect UIs.
+                        I'm <strong>Solaman U M</strong> — a Frontend Developer &amp; Data Analyst who ships production-ready web apps, ML-powered dashboards, and pixel-perfect UIs that move the needle.
                     </p>
+
                     <div class="hero-actions">
-                        <a href="#contact" class="btn-primary">
-                            Let's Connect
-                            <i data-lucide="arrow-right"></i>
+                        <a href="#projects" class="btn-primary" id="view-work-btn">
+                            View My Work <i data-lucide="arrow-down"></i>
                         </a>
-                        <a href="resume.html" target="_blank" class="btn-ghost">
-                            View Resume
-                            <i data-lucide="file-text"></i>
+                        <a href="#contact" class="btn-ghost" id="contact-hero-btn">
+                            Let's Connect <i data-lucide="arrow-right"></i>
                         </a>
                     </div>
 
-                    <!-- Tech Stack -->
+                    <!-- Credibility Strip -->
+                    <div class="hero-stats" aria-label="Key statistics">
+                        <div class="stat-item">
+                            <span class="stat-num" data-target="6" data-suffix="+">0</span>
+                            <span class="stat-label">Projects Shipped</span>
+                        </div>
+                        <div class="stat-divider" aria-hidden="true"></div>
+                        <div class="stat-item">
+                            <span class="stat-num" data-target="2" data-suffix="">0</span>
+                            <span class="stat-label">Azure Deployments</span>
+                        </div>
+                        <div class="stat-divider" aria-hidden="true"></div>
+                        <div class="stat-item">
+                            <span class="stat-num" data-target="85" data-suffix="%">0</span>
+                            <span class="stat-label">ML Accuracy</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Profile Photo -->
+                <div class="hero-right" aria-hidden="true">
+                    <div class="profile-frame">
+                        <div class="profile-glow"></div>
+                        <img src="profile.png" alt="Solaman U M — Frontend Developer & Data Analyst" class="profile-photo" loading="eager">
+                        <!-- Floating tech badges -->
+                        <div class="float-badge float-badge-1">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React" width="18" height="18">
+                            React.js
+                        </div>
+                        <div class="float-badge float-badge-2">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python" width="18" height="18">
+                            Python
+                        </div>
+                        <div class="float-badge float-badge-3">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg" alt="Azure" width="18" height="18">
+                            Azure
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tech Strip -->
+            <div class="tech-strip-wrap">
+                <div class="container">
                     <div class="tech-strip">
                         <span class="tech-label">Tech Stack</span>
-                        <div class="tech-icons">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React" title="React.js">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python" title="Python">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" alt="Next.js" title="Next.js">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" alt="TypeScript" title="TypeScript">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg" alt="Django" title="Django">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" alt="Docker" title="Docker">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg" alt="Azure" title="Azure">
+                        <div class="tech-icons" aria-label="Technologies used">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React.js" title="React.js" loading="lazy">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python" title="Python" loading="lazy">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" alt="Next.js" title="Next.js" loading="lazy">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" alt="TypeScript" title="TypeScript" loading="lazy">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg" alt="Django" title="Django" loading="lazy">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" alt="Docker" title="Docker" loading="lazy">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg" alt="Azure" title="Azure" loading="lazy">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg" alt="FastAPI" title="FastAPI" loading="lazy">
                         </div>
-                    </div>
-                </div>
-
-                <!-- Profile Photo (Visually Right on Desktop) -->
-                <div class="hero-right fade-in-up delay-200">
-                    <div class="profile-photo-wrap">
-                        <div class="profile-glow"></div>
-                        <img src="profile.png" alt="Solaman U M — Frontend Developer &amp; Data Analyst" class="profile-photo">
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- ═══════════════════ SERVICES ═══════════════════ -->
-        <section id="services" class="section-pad">
-            <div class="container">
-                <div class="section-header fade-in-up">
-                    <span class="section-tag">What I Offer</span>
-                    <h2 class="section-title">Services &amp; Expertise</h2>
-                    <p class="section-sub">End-to-end digital solutions built for performance, scale and modern aesthetics</p>
-                </div>
-
-                <div class="services-grid">
-                    <!-- Service 1 -->
-                    <div class="service-card fade-in-up">
-                        <div class="service-icon-wrap">
-                            <svg class="service-wireframe" viewBox="0 0 80 80" fill="none">
-                                <rect x="8" y="12" width="64" height="10" rx="2" stroke="#1A66FF" stroke-width="1.5" stroke-dasharray="4 2"/>
-                                <rect x="8" y="28" width="40" height="6" rx="2" stroke="#1A66FF" stroke-width="1.5"/>
-                                <rect x="8" y="40" width="64" height="4" rx="2" stroke="#3A7FFF" stroke-width="1"/>
-                                <rect x="8" y="50" width="50" height="4" rx="2" stroke="#3A7FFF" stroke-width="1"/>
-                                <rect x="8" y="60" width="28" height="10" rx="4" stroke="#1A66FF" stroke-width="1.5" fill="#1A66FF" fill-opacity="0.15"/>
-                                <text x="12" y="69" font-size="7" fill="#1A66FF">&lt;/&gt;</text>
-                            </svg>
-                        </div>
-                        <h3 class="service-title">Web Development</h3>
-                        <p class="service-desc">Crafting fast, responsive, and accessible web applications using React.js, Next.js, HTML5, and CSS3 — from landing pages to full SaaS products.</p>
-                        <ul class="service-features">
-                            <li><i data-lucide="check"></i> React.js / Next.js SPAs</li>
-                            <li><i data-lucide="check"></i> Django &amp; Flask REST APIs</li>
-                            <li><i data-lucide="check"></i> Responsive UI / UX</li>
-                        </ul>
-                    </div>
-
-                    <!-- Service 2 -->
-                    <div class="service-card service-card-featured fade-in-up delay-100">
-                        <div class="service-featured-badge">Most Popular</div>
-                        <div class="service-icon-wrap">
-                            <svg class="service-wireframe" viewBox="0 0 80 80" fill="none">
-                                <!-- Desktop -->
-                                <rect x="4" y="10" width="45" height="32" rx="3" stroke="#1A66FF" stroke-width="1.5"/>
-                                <!-- Mobile -->
-                                <rect x="54" y="20" width="22" height="34" rx="3" stroke="#1A66FF" stroke-width="1.5"/>
-                                <rect x="57" y="48" width="16" height="2" rx="1" stroke="#3A7FFF" stroke-width="1"/>
-                                <!-- Screen lines -->
-                                <rect x="8" y="16" width="37" height="2" rx="1" stroke="#3A7FFF" stroke-width="1"/>
-                                <rect x="8" y="21" width="28" height="2" rx="1" stroke="#3A7FFF" stroke-width="1"/>
-                                <rect x="8" y="26" width="37" height="8" rx="2" stroke="#1A66FF" stroke-width="1" fill="#1A66FF" fill-opacity="0.08"/>
-                                <!-- Stand -->
-                                <line x1="22" y1="42" x2="22" y2="52" stroke="#1A66FF" stroke-width="1.5"/>
-                                <line x1="14" y1="52" x2="30" y2="52" stroke="#1A66FF" stroke-width="1.5"/>
-                            </svg>
-                        </div>
-                        <h3 class="service-title">Cross-Platform Development</h3>
-                        <p class="service-desc">Building applications that work flawlessly across web and mobile — containerized with Docker and deployed on cloud platforms like Azure.</p>
-                        <ul class="service-features">
-                            <li><i data-lucide="check"></i> Docker &amp; Azure Deployment</li>
-                            <li><i data-lucide="check"></i> FastAPI Microservices</li>
-                            <li><i data-lucide="check"></i> CI/CD Pipeline Setup</li>
-                        </ul>
-                    </div>
-
-                    <!-- Service 3 -->
-                    <div class="service-card fade-in-up delay-200">
-                        <div class="service-icon-wrap">
-                            <svg class="service-wireframe" viewBox="0 0 80 80" fill="none">
-                                <!-- Cursor -->
-                                <path d="M20 15 L20 50 L30 42 L36 58 L40 55 L34 39 L46 39 Z" stroke="#1A66FF" stroke-width="1.5" stroke-linejoin="round"/>
-                                <!-- Color swatches -->
-                                <rect x="50" y="12" width="12" height="12" rx="2" fill="#1A66FF" fill-opacity="0.5" stroke="#1A66FF" stroke-width="1"/>
-                                <rect x="50" y="28" width="12" height="12" rx="2" fill="#3A7FFF" fill-opacity="0.3" stroke="#3A7FFF" stroke-width="1"/>
-                                <rect x="50" y="44" width="12" height="12" rx="2" fill="#1A66FF" fill-opacity="0.15" stroke="#1A66FF" stroke-width="1"/>
-                                <!-- Layout grid -->
-                                <rect x="50" y="60" width="26" height="2" rx="1" stroke="#3A7FFF" stroke-width="1"/>
-                                <rect x="50" y="65" width="18" height="2" rx="1" stroke="#3A7FFF" stroke-width="1"/>
-                            </svg>
-                        </div>
-                        <h3 class="service-title">UI/UX Design &amp; Analytics</h3>
-                        <p class="service-desc">Designing polished interfaces and generating actionable insights through Power BI dashboards, ML models, and data visualization strategies.</p>
-                        <ul class="service-features">
-                            <li><i data-lucide="check"></i> Power BI Dashboards</li>
-                            <li><i data-lucide="check"></i> ML Model Integration</li>
-                            <li><i data-lucide="check"></i> Data-Driven Design</li>
-                        </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ═══════════════════ PROJECTS ═══════════════════ -->
-        <section id="projects" class="section-pad section-alt">
+        <!-- ═══════════════════ FEATURED PROJECTS ═══════════════════ -->
+        <section id="projects" class="section-pad" aria-labelledby="projects-heading">
             <div class="container">
-                <div class="section-header fade-in-up">
-                    <span class="section-tag">My Portfolio</span>
-                    <h2 class="section-title">Featured Projects</h2>
-                    <p class="section-sub">Production-ready apps spanning cloud deployment, ML, NLP, and full-stack development</p>
+                <div class="section-header reveal">
+                    <span class="section-tag">Portfolio</span>
+                    <h2 class="section-title" id="projects-heading">Featured Projects</h2>
+                    <p class="section-sub">Production-ready apps spanning cloud, ML, NLP, and full-stack development</p>
                 </div>
 
-                <!-- Filter -->
-                <div class="filter-bar fade-in-up">
-                    <button class="filter-btn active" data-filter="all">All</button>
-                    <button class="filter-btn" data-filter="web">Web Dev</button>
-                    <button class="filter-btn" data-filter="ml">ML &amp; NLP</button>
-                    <button class="filter-btn" data-filter="analytics">Analytics</button>
+                <!-- Filter Bar -->
+                <div class="filter-bar reveal" role="group" aria-label="Filter projects by category">
+                    <button class="filter-btn active" data-filter="all" id="filter-all">All Work</button>
+                    <button class="filter-btn" data-filter="web" id="filter-web">Web Dev</button>
+                    <button class="filter-btn" data-filter="ml" id="filter-ml">ML &amp; NLP</button>
+                    <button class="filter-btn" data-filter="analytics" id="filter-analytics">Analytics</button>
                 </div>
 
-                <div class="projects-bento">
-                    <!-- Project 1 – Large featured -->
-                    <article class="proj-card proj-card-large fade-in-up" data-category="web">
-                        <div class="proj-gradient proj-g1">
-                            <i data-lucide="pie-chart" class="proj-icon-bg"></i>
+                <div class="projects-grid" id="projects-grid">
+
+                    <!-- Featured Project — Large Card -->
+                    <article class="proj-card proj-featured reveal" data-category="web" aria-label="POC 46 Creator Distribution Funnel project">
+                        <div class="proj-thumb">
+                            <img src="proj-poc46.png" alt="POC 46 Creator Distribution Funnel — dashboard screenshot" class="proj-img" loading="lazy">
                         </div>
                         <div class="proj-content">
-                            <span class="proj-badge">Full Stack / Azure</span>
+                            <div class="proj-meta">
+                                <span class="proj-badge">Full Stack / Azure</span>
+                                <span class="proj-featured-label">★ Featured</span>
+                            </div>
                             <h3>POC 46 — Creator Distribution Funnel</h3>
-                            <p>Designed and deployed an interactive distribution model forecasting creator analytics during Real Rails Internship. Built with Next.js + FastAPI + Docker + Azure.</p>
+                            <p>Designed and deployed an interactive distribution model forecasting creator analytics during Real Rails Internship. Full-stack with Next.js + FastAPI + Docker, live on Azure Container Apps.</p>
                             <div class="proj-tags">
-                                <span>Next.js</span><span>FastAPI</span><span>Docker</span><span>Azure</span>
+                                <span>Next.js</span><span>FastAPI</span><span>Docker</span><span>Azure</span><span>TypeScript</span>
                             </div>
                             <div class="proj-links">
-                                <a href="https://github.com/SOLAMANum" target="_blank" rel="noopener"><i data-lucide="github"></i> Code</a>
-                                <a href="https://lnkd.in/gmwh8nF4" target="_blank" rel="noopener"><i data-lucide="external-link"></i> Live Demo</a>
+                                <a href="https://github.com/SOLAMANum" target="_blank" rel="noopener" class="proj-link-ghost">
+                                    <i data-lucide="github"></i> Code
+                                </a>
+                                <a href="https://lnkd.in/gmwh8nF4" target="_blank" rel="noopener" class="proj-link-accent">
+                                    Live Demo <i data-lucide="arrow-up-right"></i>
+                                </a>
                             </div>
                         </div>
                     </article>
 
                     <!-- Project 2 -->
-                    <article class="proj-card fade-in-up delay-100" data-category="web">
-                        <div class="proj-gradient proj-g2">
-                            <i data-lucide="navigation" class="proj-icon-bg"></i>
+                    <article class="proj-card reveal" data-category="web" aria-label="POC 42 Mobile Ad Journey project">
+                        <div class="proj-thumb">
+                            <img src="proj-poc42.png" alt="POC 42 Mobile Ad Journey — app screenshot" class="proj-img" loading="lazy">
                         </div>
                         <div class="proj-content">
-                            <span class="proj-badge">Cloud Web App</span>
+                            <span class="proj-badge proj-badge-green">Cloud Web App</span>
                             <h3>POC 42 — Mobile Ad Journey</h3>
-                            <p>Cloud-deployed ad journey tracker visualizing routing, user flows and conversion metrics.</p>
+                            <p>Cloud-deployed ad journey tracker visualizing user routing, conversion flows and real-time metrics on Azure.</p>
                             <div class="proj-tags">
                                 <span>Next.js</span><span>TypeScript</span><span>Docker</span><span>Azure</span>
                             </div>
                             <div class="proj-links">
-                                <a href="https://lnkd.in/g8vgKG-G" target="_blank" rel="noopener"><i data-lucide="external-link"></i> Demo</a>
+                                <a href="https://lnkd.in/g8vgKG-G" target="_blank" rel="noopener" class="proj-link-accent">
+                                    Live Demo <i data-lucide="arrow-up-right"></i>
+                                </a>
                             </div>
                         </div>
                     </article>
 
                     <!-- Project 3 -->
-                    <article class="proj-card fade-in-up delay-200" data-category="ml">
-                        <div class="proj-gradient proj-g3">
-                            <i data-lucide="activity" class="proj-icon-bg"></i>
+                    <article class="proj-card reveal" data-category="ml" aria-label="Breast Cancer Prediction project">
+                        <div class="proj-thumb">
+                            <img src="proj-cancer.png" alt="Breast Cancer Prediction ML App" class="proj-img" loading="lazy">
                         </div>
                         <div class="proj-content">
-                            <span class="proj-badge">Machine Learning</span>
+                            <span class="proj-badge proj-badge-rose">Machine Learning</span>
                             <h3>Breast Cancer Prediction App</h3>
-                            <p>85% accuracy classification model on 500+ patient records, deployed via Flask API with real-time predictions.</p>
+                            <p>85% accuracy classification on 500+ patient records with clean preprocessing pipelines, deployed via Flask API with real-time predictions.</p>
                             <div class="proj-tags">
-                                <span>Python</span><span>Flask</span><span>Scikit-learn</span>
+                                <span>Python</span><span>Flask</span><span>Scikit-learn</span><span>Pandas</span>
                             </div>
                             <div class="proj-links">
-                                <a href="https://github.com/SOLAMANum" target="_blank" rel="noopener"><i data-lucide="github"></i> Code</a>
+                                <a href="https://github.com/SOLAMANum" target="_blank" rel="noopener" class="proj-link-ghost">
+                                    <i data-lucide="github"></i> Code
+                                </a>
                             </div>
                         </div>
                     </article>
 
                     <!-- Project 4 -->
-                    <article class="proj-card fade-in-up" data-category="ml">
-                        <div class="proj-gradient proj-g4">
-                            <i data-lucide="message-square" class="proj-icon-bg"></i>
+                    <article class="proj-card reveal" data-category="ml" aria-label="RASA Book Recommender project">
+                        <div class="proj-thumb">
+                            <img src="proj-rasa.png" alt="RASA NLU Book Recommender chatbot" class="proj-img" loading="lazy">
                         </div>
                         <div class="proj-content">
-                            <span class="proj-badge">NLP / Chatbot</span>
+                            <span class="proj-badge proj-badge-purple">NLP / Chatbot</span>
                             <h3>RASA Book Recommender</h3>
-                            <p>Conversational agent with custom intents, slots &amp; entities for book recommendations.</p>
+                            <p>Conversational AI agent with custom intents, slots &amp; entities for intelligent book recommendations using Rasa NLU.</p>
                             <div class="proj-tags">
                                 <span>Rasa NLU</span><span>Python</span><span>JavaScript</span>
                             </div>
                             <div class="proj-links">
-                                <a href="https://github.com/SOLAMANum" target="_blank" rel="noopener"><i data-lucide="github"></i> Code</a>
+                                <a href="https://github.com/SOLAMANum" target="_blank" rel="noopener" class="proj-link-ghost">
+                                    <i data-lucide="github"></i> Code
+                                </a>
                             </div>
                         </div>
                     </article>
 
                     <!-- Project 5 -->
-                    <article class="proj-card fade-in-up delay-100" data-category="analytics">
-                        <div class="proj-gradient proj-g5">
-                            <i data-lucide="bar-chart-2" class="proj-icon-bg"></i>
+                    <article class="proj-card reveal" data-category="analytics" aria-label="Play Store Download Analysis project">
+                        <div class="proj-thumb">
+                            <img src="proj-playstore.png" alt="Play Store Download Analysis Power BI dashboard" class="proj-img" loading="lazy">
                         </div>
                         <div class="proj-content">
                             <span class="proj-badge">Business Intelligence</span>
                             <h3>Play Store Download Analysis</h3>
-                            <p>Predictive analysis on 1M+ records via Power BI; improved marketing strategy by 20%.</p>
+                            <p>Predictive analysis on 1M+ records via Power BI; surfaced patterns that improved marketing strategy effectiveness by 20%.</p>
                             <div class="proj-tags">
-                                <span>Power BI</span><span>DAX</span><span>SQL</span>
+                                <span>Power BI</span><span>DAX</span><span>SQL</span><span>Python</span>
                             </div>
                             <div class="proj-links">
-                                <a href="https://www.linkedin.com/in/solaman-um-b4264427b/" target="_blank" rel="noopener"><i data-lucide="linkedin"></i> Details</a>
+                                <a href="https://www.linkedin.com/in/solaman-um-b4264427b/" target="_blank" rel="noopener" class="proj-link-ghost">
+                                    <i data-lucide="linkedin"></i> Details
+                                </a>
                             </div>
                         </div>
                     </article>
 
                     <!-- Project 6 -->
-                    <article class="proj-card fade-in-up delay-200" data-category="web">
-                        <div class="proj-gradient proj-g6">
-                            <i data-lucide="shopping-bag" class="proj-icon-bg"></i>
+                    <article class="proj-card reveal" data-category="web" aria-label="Hot Wheels E-Commerce project">
+                        <div class="proj-thumb">
+                            <img src="proj-hotwheels.png" alt="Hot Wheels E-Commerce Django app" class="proj-img" loading="lazy">
                         </div>
                         <div class="proj-content">
-                            <span class="proj-badge">Django Web App</span>
+                            <span class="proj-badge proj-badge-blue">Django Web App</span>
                             <h3>Hot Wheels E-Commerce</h3>
-                            <p>Full Django marketplace with cart, auth, admin dashboard and inventory tracking.</p>
+                            <p>Full Django marketplace with cart, authentication, admin dashboard, and inventory tracking from end to end.</p>
                             <div class="proj-tags">
-                                <span>Django</span><span>Python</span><span>Bootstrap</span>
+                                <span>Django</span><span>Python</span><span>Bootstrap</span><span>SQLite</span>
                             </div>
                             <div class="proj-links">
-                                <a href="https://github.com/SOLAMANum" target="_blank" rel="noopener"><i data-lucide="github"></i> Code</a>
+                                <a href="https://github.com/SOLAMANum" target="_blank" rel="noopener" class="proj-link-ghost">
+                                    <i data-lucide="github"></i> Code
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- GitHub CTA Card -->
+                    <article class="proj-card proj-featured proj-github-cta reveal" data-category="all" aria-label="Explore more projects on GitHub">
+                        <div class="proj-github-icon-wrap">
+                            <div class="proj-github-glow"></div>
+                            <i data-lucide="github" class="proj-github-icon"></i>
+                        </div>
+                        <div class="proj-content">
+                            <span class="proj-badge">Open Source</span>
+                            <h3>Explore 15+ More Repositories</h3>
+                            <p>I actively ship open-source code. Browse my GitHub for automated pipelines, data dashboards, machine learning notebook projects, and mini-experiments.</p>
+                            <div class="proj-links">
+                                <a href="https://github.com/SOLAMANum" target="_blank" rel="noopener" class="proj-link-accent">
+                                    Browse My GitHub <i data-lucide="arrow-up-right"></i>
+                                </a>
                             </div>
                         </div>
                     </article>
@@ -331,136 +379,387 @@
             </div>
         </section>
 
-        <!-- ═══════════════════ SKILLS ═══════════════════ -->
-        <section id="skills" class="section-pad">
+        <!-- ═══════════════════ ABOUT ═══════════════════ -->
+        <section id="about" class="section-pad section-alt" aria-labelledby="about-heading">
             <div class="container">
-                <div class="section-header fade-in-up">
-                    <span class="section-tag">Expertise</span>
-                    <h2 class="section-title">Skills &amp; Proficiency</h2>
-                </div>
-                <div class="skills-bento">
-                    <div class="skill-panel fade-in-up">
-                        <div class="skill-panel-header">
-                            <i data-lucide="layout"></i>
-                            <h3>Frontend</h3>
+                <div class="about-grid">
+                    <!-- Left — Story -->
+                    <div class="about-left reveal">
+                        <span class="section-tag">About Me</span>
+                        <h2 class="section-title left-align" id="about-heading">
+                            A Builder Who Cares<br>About the Details
+                        </h2>
+                        <p class="about-text">
+                            I'm Solaman, an MCA scholar at Nehru College of Engineering &amp; Research Centre, Thrissur — with practical experience as a Frontend &amp; Cloud intern at Infocreon Solutions (Real Rails). I build things that are fast, maintainable, and visually sharp.
+                        </p>
+                        <p class="about-text">
+                            My work sits at the intersection of modern web development and data analytics. I care deeply about code quality, user experience, and shipping products that actually perform — not just look good in a demo.
+                        </p>
+                        <p class="about-text">
+                            When I'm not building, I'm studying ML pipelines, experimenting with NLP, or reading about system design patterns. I'm looking for teams where good engineering and great design both matter.
+                        </p>
+                        <div class="currently-learning" aria-label="Currently learning">
+                            <span class="cl-label">Currently learning</span>
+                            <div class="cl-pills">
+                                <span class="cl-pill">Next.js 15</span>
+                                <span class="cl-pill">LangChain</span>
+                                <span class="cl-pill">PostgreSQL</span>
+                                <span class="cl-pill">TypeScript 5</span>
+                            </div>
                         </div>
-                        <div class="skill-bars">
-                            <div class="skill-item"><span>React.js</span><div class="sbar"><div class="sbar-fill" data-w="80"></div></div><span>80%</span></div>
-                            <div class="skill-item"><span>HTML5 / CSS3</span><div class="sbar"><div class="sbar-fill" data-w="90"></div></div><span>90%</span></div>
-                            <div class="skill-item"><span>Next.js</span><div class="sbar"><div class="sbar-fill" data-w="75"></div></div><span>75%</span></div>
-                            <div class="skill-item"><span>Bootstrap</span><div class="sbar"><div class="sbar-fill" data-w="85"></div></div><span>85%</span></div>
-                        </div>
-                    </div>
-                    <div class="skill-panel fade-in-up delay-100">
-                        <div class="skill-panel-header">
-                            <i data-lucide="code-2"></i>
-                            <h3>Backend &amp; APIs</h3>
-                        </div>
-                        <div class="skill-bars">
-                            <div class="skill-item"><span>Python (Flask/Django)</span><div class="sbar"><div class="sbar-fill" data-w="85"></div></div><span>85%</span></div>
-                            <div class="skill-item"><span>FastAPI</span><div class="sbar"><div class="sbar-fill" data-w="78"></div></div><span>78%</span></div>
-                            <div class="skill-item"><span>SQL Databases</span><div class="sbar"><div class="sbar-fill" data-w="80"></div></div><span>80%</span></div>
-                            <div class="skill-item"><span>C++</span><div class="sbar"><div class="sbar-fill" data-w="75"></div></div><span>75%</span></div>
-                        </div>
-                    </div>
-                    <div class="skill-panel fade-in-up delay-200">
-                        <div class="skill-panel-header">
-                            <i data-lucide="bar-chart-2"></i>
-                            <h3>Data &amp; ML</h3>
-                        </div>
-                        <div class="skill-bars">
-                            <div class="skill-item"><span>Power BI</span><div class="sbar"><div class="sbar-fill" data-w="85"></div></div><span>85%</span></div>
-                            <div class="skill-item"><span>Scikit-learn</span><div class="sbar"><div class="sbar-fill" data-w="80"></div></div><span>80%</span></div>
-                            <div class="skill-item"><span>Pandas / NumPy</span><div class="sbar"><div class="sbar-fill" data-w="82"></div></div><span>82%</span></div>
-                            <div class="skill-item"><span>NLP (NLTK/SpaCy)</span><div class="sbar"><div class="sbar-fill" data-w="72"></div></div><span>72%</span></div>
+                        <div class="about-actions">
+                            <a href="#contact" class="btn-primary" id="about-contact-btn">Start a Conversation <i data-lucide="arrow-right"></i></a>
+                            <a href="resume.html" target="_blank" rel="noopener" class="btn-ghost" id="about-resume-btn">
+                                <i data-lucide="file-text"></i> Resume
+                            </a>
                         </div>
                     </div>
-                    <div class="skill-panel fade-in-up delay-300">
-                        <div class="skill-panel-header">
-                            <i data-lucide="cloud"></i>
-                            <h3>Cloud &amp; DevOps</h3>
+
+                    <!-- Right — Cards -->
+                    <div class="about-right reveal">
+                        <div class="about-card-grid">
+                            <div class="about-card about-card-accent">
+                                <div class="about-card-icon"><i data-lucide="code-2"></i></div>
+                                <h4>Frontend Focus</h4>
+                                <p>React, Next.js, TypeScript — building interfaces that are fast, accessible, and pixel-precise.</p>
+                            </div>
+                            <div class="about-card">
+                                <div class="about-card-icon"><i data-lucide="bar-chart-2"></i></div>
+                                <h4>Data-Driven</h4>
+                                <p>Power BI, Pandas, Scikit-learn — turning raw data into decisions that matter.</p>
+                            </div>
+                            <div class="about-card">
+                                <div class="about-card-icon"><i data-lucide="cloud"></i></div>
+                                <h4>Cloud-Ready</h4>
+                                <p>Docker, Azure Container Apps, CI/CD — shipping apps that scale from day one.</p>
+                            </div>
+                            <div class="about-card">
+                                <div class="about-card-icon"><i data-lucide="brain"></i></div>
+                                <h4>ML Curious</h4>
+                                <p>Scikit-learn, NLTK, Rasa NLU — integrating intelligence into production applications.</p>
+                            </div>
                         </div>
-                        <div class="skill-bars">
-                            <div class="skill-item"><span>Docker</span><div class="sbar"><div class="sbar-fill" data-w="80"></div></div><span>80%</span></div>
-                            <div class="skill-item"><span>Azure</span><div class="sbar"><div class="sbar-fill" data-w="75"></div></div><span>75%</span></div>
-                            <div class="skill-item"><span>Git / GitHub</span><div class="sbar"><div class="sbar-fill" data-w="88"></div></div><span>88%</span></div>
-                            <div class="skill-item"><span>Agile / Scrum</span><div class="sbar"><div class="sbar-fill" data-w="80"></div></div><span>80%</span></div>
+
+                        <!-- Quick info strip -->
+                        <div class="about-info-strip">
+                            <div class="info-item">
+                                <i data-lucide="map-pin"></i>
+                                <span>Thrissur, Kerala, India</span>
+                            </div>
+                            <div class="info-item">
+                                <i data-lucide="graduation-cap"></i>
+                                <span>MCA · Nehru College · 2024–2026</span>
+                            </div>
+                            <div class="info-item">
+                                <i data-lucide="briefcase"></i>
+                                <span>Open to full-time &amp; freelance roles</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ═══════════════════ TESTIMONIALS ═══════════════════ -->
-        <section id="testimonials" class="section-pad section-alt">
+        <!-- ═══════════════════ SKILLS ═══════════════════ -->
+        <section id="skills" class="section-pad" aria-labelledby="skills-heading">
             <div class="container">
-                <div class="section-header fade-in-up">
+                <div class="section-header reveal">
+                    <span class="section-tag">Expertise</span>
+                    <h2 class="section-title" id="skills-heading">Skills &amp; Tech Stack</h2>
+                    <p class="section-sub">Core technologies and tools I use to build production-grade products</p>
+                </div>
+
+                <!-- Tech Category Grid -->
+                <div class="skills-grid reveal">
+                    <div class="skill-panel">
+                        <div class="skill-panel-header">
+                            <i data-lucide="layout" class="skill-icon"></i>
+                            <h3>Frontend</h3>
+                        </div>
+                        <div class="skill-bars">
+                            <div class="skill-item">
+                                <span class="skill-name">React.js</span>
+                                <div class="sbar" aria-label="React.js proficiency 80%"><div class="sbar-fill" data-w="80"></div></div>
+                                <span class="skill-pct">80%</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">HTML5 / CSS3</span>
+                                <div class="sbar" aria-label="HTML5/CSS3 proficiency 90%"><div class="sbar-fill" data-w="90"></div></div>
+                                <span class="skill-pct">90%</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Next.js</span>
+                                <div class="sbar" aria-label="Next.js proficiency 75%"><div class="sbar-fill" data-w="75"></div></div>
+                                <span class="skill-pct">75%</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">TypeScript</span>
+                                <div class="sbar" aria-label="TypeScript proficiency 72%"><div class="sbar-fill" data-w="72"></div></div>
+                                <span class="skill-pct">72%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-panel">
+                        <div class="skill-panel-header">
+                            <i data-lucide="code-2" class="skill-icon"></i>
+                            <h3>Backend &amp; APIs</h3>
+                        </div>
+                        <div class="skill-bars">
+                            <div class="skill-item">
+                                <span class="skill-name">Python (Flask / Django)</span>
+                                <div class="sbar" aria-label="Python proficiency 85%"><div class="sbar-fill" data-w="85"></div></div>
+                                <span class="skill-pct">85%</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">FastAPI</span>
+                                <div class="sbar" aria-label="FastAPI proficiency 78%"><div class="sbar-fill" data-w="78"></div></div>
+                                <span class="skill-pct">78%</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">SQL / Databases</span>
+                                <div class="sbar" aria-label="SQL proficiency 80%"><div class="sbar-fill" data-w="80"></div></div>
+                                <span class="skill-pct">80%</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">REST APIs</span>
+                                <div class="sbar" aria-label="REST API proficiency 82%"><div class="sbar-fill" data-w="82"></div></div>
+                                <span class="skill-pct">82%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-panel">
+                        <div class="skill-panel-header">
+                            <i data-lucide="bar-chart-2" class="skill-icon"></i>
+                            <h3>Data &amp; ML</h3>
+                        </div>
+                        <div class="skill-bars">
+                            <div class="skill-item">
+                                <span class="skill-name">Power BI / DAX</span>
+                                <div class="sbar" aria-label="Power BI proficiency 85%"><div class="sbar-fill" data-w="85"></div></div>
+                                <span class="skill-pct">85%</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Scikit-learn</span>
+                                <div class="sbar" aria-label="Scikit-learn proficiency 80%"><div class="sbar-fill" data-w="80"></div></div>
+                                <span class="skill-pct">80%</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Pandas / NumPy</span>
+                                <div class="sbar" aria-label="Pandas/NumPy proficiency 82%"><div class="sbar-fill" data-w="82"></div></div>
+                                <span class="skill-pct">82%</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">NLP (NLTK / Rasa)</span>
+                                <div class="sbar" aria-label="NLP proficiency 72%"><div class="sbar-fill" data-w="72"></div></div>
+                                <span class="skill-pct">72%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-panel">
+                        <div class="skill-panel-header">
+                            <i data-lucide="cloud" class="skill-icon"></i>
+                            <h3>Cloud &amp; DevOps</h3>
+                        </div>
+                        <div class="skill-bars">
+                            <div class="skill-item">
+                                <span class="skill-name">Docker</span>
+                                <div class="sbar" aria-label="Docker proficiency 80%"><div class="sbar-fill" data-w="80"></div></div>
+                                <span class="skill-pct">80%</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Azure Container Apps</span>
+                                <div class="sbar" aria-label="Azure proficiency 75%"><div class="sbar-fill" data-w="75"></div></div>
+                                <span class="skill-pct">75%</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Git / GitHub</span>
+                                <div class="sbar" aria-label="Git proficiency 88%"><div class="sbar-fill" data-w="88"></div></div>
+                                <span class="skill-pct">88%</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Agile / Scrum</span>
+                                <div class="sbar" aria-label="Agile proficiency 80%"><div class="sbar-fill" data-w="80"></div></div>
+                                <span class="skill-pct">80%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tool Tags -->
+                <div class="tools-section reveal">
+                    <h3 class="tools-label">Tools &amp; Platforms</h3>
+                    <div class="tools-tags" aria-label="Tools and platforms">
+                        <span class="tool-tag">VS Code</span>
+                        <span class="tool-tag">Figma</span>
+                        <span class="tool-tag">Postman</span>
+                        <span class="tool-tag">Jupyter</span>
+                        <span class="tool-tag">GitHub Actions</span>
+                        <span class="tool-tag">Notion</span>
+                        <span class="tool-tag">Vercel</span>
+                        <span class="tool-tag">Slack</span>
+                        <span class="tool-tag">Linux</span>
+                        <span class="tool-tag">Bootstrap</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════ EXPERIENCE / PROCESS ═══════════════════ -->
+        <section id="experience" class="section-pad section-alt" aria-labelledby="experience-heading">
+            <div class="container">
+                <div class="exp-layout">
+                    <!-- Experience Timeline -->
+                    <div class="exp-col reveal">
+                        <span class="section-tag">Experience</span>
+                        <h2 class="section-title left-align" id="experience-heading">Where I've Worked</h2>
+
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <div class="timeline-meta">
+                                        <span class="timeline-period">2025 · Present</span>
+                                        <span class="timeline-badge">Internship</span>
+                                    </div>
+                                    <h3 class="timeline-role">Frontend &amp; Cloud Intern</h3>
+                                    <p class="timeline-company">Infocreon Solutions (Real Rails)</p>
+                                    <p class="timeline-desc">Developed and deployed two production POC apps (POC 42 &amp; 46) on Azure Container Apps using Next.js, FastAPI, and Docker. Participated in Agile sprints, code reviews, and cross-team collaboration.</p>
+                                    <div class="timeline-tags">
+                                        <span>Next.js</span><span>FastAPI</span><span>Docker</span><span>Azure</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <div class="timeline-meta">
+                                        <span class="timeline-period">2024 – 2026</span>
+                                        <span class="timeline-badge">Education</span>
+                                    </div>
+                                    <h3 class="timeline-role">Master of Computer Applications (MCA)</h3>
+                                    <p class="timeline-company">Nehru College of Engineering &amp; Research Centre</p>
+                                    <p class="timeline-desc">Specializing in software development, machine learning, and data science. Built multiple applied ML projects and NLP systems alongside full-stack web development coursework.</p>
+                                    <div class="timeline-tags">
+                                        <span>Python</span><span>ML</span><span>Algorithms</span><span>DBMS</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Process / Workflow -->
+                    <div class="process-col reveal">
+                        <span class="section-tag">My Process</span>
+                        <h2 class="section-title left-align">How I Work</h2>
+
+                        <div class="process-steps">
+                            <div class="process-step">
+                                <div class="process-num">01</div>
+                                <div class="process-text">
+                                    <h4>Understand &amp; Define</h4>
+                                    <p>I start with requirements — what problem is being solved, who uses it, what success looks like.</p>
+                                </div>
+                            </div>
+                            <div class="process-step">
+                                <div class="process-num">02</div>
+                                <div class="process-text">
+                                    <h4>Spec &amp; Architect</h4>
+                                    <p>Clear milestones, tech stack decisions, data models, and API contracts before writing a line of code.</p>
+                                </div>
+                            </div>
+                            <div class="process-step">
+                                <div class="process-num">03</div>
+                                <div class="process-text">
+                                    <h4>Build &amp; Iterate</h4>
+                                    <p>Incremental builds with clean commits, code reviews, and regular demos — no big-bang reveals.</p>
+                                </div>
+                            </div>
+                            <div class="process-step">
+                                <div class="process-num">04</div>
+                                <div class="process-text">
+                                    <h4>Ship &amp; Monitor</h4>
+                                    <p>Containerized deployment, production monitoring, and post-launch feedback loops built in from the start.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════ TESTIMONIALS / ACHIEVEMENTS ═══════════════════ -->
+        <section id="testimonials" class="section-pad" aria-labelledby="testimonials-heading">
+            <div class="container">
+                <div class="section-header reveal">
                     <span class="section-tag">Social Proof</span>
-                    <h2 class="section-title">What People Say</h2>
-                    <p class="section-sub">Feedback from colleagues, mentors, and collaborators</p>
+                    <h2 class="section-title" id="testimonials-heading">What People Say</h2>
+                    <p class="section-sub">Feedback from colleagues, mentors, and collaborators I've worked with</p>
                 </div>
 
                 <div class="testimonials-grid">
-                    <div class="testi-card fade-in-up">
-                        <div class="testi-stars">★★★★★</div>
+                    <div class="testi-card reveal" role="article">
+                        <div class="testi-stars" aria-label="5 stars">★★★★★</div>
                         <p class="testi-text">"Solaman delivered a production-ready Next.js dashboard ahead of schedule. His attention to component architecture and clean TypeScript is exceptional."</p>
                         <div class="testi-author">
-                            <div class="testi-avatar">AR</div>
+                            <div class="testi-avatar" aria-hidden="true">AR</div>
                             <div>
                                 <div class="testi-name">Arjun Rajan</div>
                                 <div class="testi-role">Tech Lead, Infocreon Solutions</div>
                             </div>
                         </div>
                     </div>
-                    <div class="testi-card fade-in-up delay-100">
-                        <div class="testi-stars">★★★★★</div>
-                        <p class="testi-text">"The Power BI dashboards Solaman built gave us clarity on our app performance we never had before. Truly data-driven thinking."</p>
+                    <div class="testi-card testi-featured reveal" role="article">
+                        <div class="testi-stars" aria-label="5 stars">★★★★★</div>
+                        <p class="testi-text">"The Power BI dashboards Solaman built gave us clarity on app performance we never had before. Truly data-driven thinking — actionable, clean, and insightful."</p>
                         <div class="testi-author">
-                            <div class="testi-avatar">PS</div>
+                            <div class="testi-avatar" aria-hidden="true">PS</div>
                             <div>
                                 <div class="testi-name">Priya Sharma</div>
                                 <div class="testi-role">Product Manager, SaaS Startup</div>
                             </div>
                         </div>
                     </div>
-                    <div class="testi-card fade-in-up delay-200">
-                        <div class="testi-stars">★★★★★</div>
-                        <p class="testi-text">"His ML model for breast cancer classification was thorough — clean preprocessing pipelines and solid accuracy. Great future in AI/ML."</p>
+                    <div class="testi-card reveal" role="article">
+                        <div class="testi-stars" aria-label="5 stars">★★★★★</div>
+                        <p class="testi-text">"His ML model for cancer classification was thorough — clean preprocessing pipelines and solid accuracy. Great future in AI/ML."</p>
                         <div class="testi-author">
-                            <div class="testi-avatar">DK</div>
+                            <div class="testi-avatar" aria-hidden="true">DK</div>
                             <div>
                                 <div class="testi-name">Dr. Deepa K.</div>
                                 <div class="testi-role">Faculty Mentor, Nehru College</div>
                             </div>
                         </div>
                     </div>
-                    <div class="testi-card fade-in-up">
-                        <div class="testi-stars">★★★★★</div>
-                        <p class="testi-text">"Solaman is one of those rare developers who cares about both the code and the user experience. A reliable, detail-oriented team player."</p>
+                    <div class="testi-card reveal" role="article">
+                        <div class="testi-stars" aria-label="5 stars">★★★★★</div>
+                        <p class="testi-text">"Solaman is one of those rare developers who cares about both the code quality and the user experience. A reliable, detail-oriented team player."</p>
                         <div class="testi-author">
-                            <div class="testi-avatar">MN</div>
+                            <div class="testi-avatar" aria-hidden="true">MN</div>
                             <div>
                                 <div class="testi-name">Mohammed Nazar</div>
                                 <div class="testi-role">Senior Developer, Real Rails</div>
                             </div>
                         </div>
                     </div>
-                    <div class="testi-card fade-in-up delay-100">
-                        <div class="testi-stars">★★★★★</div>
-                        <p class="testi-text">"Deployed two full-stack POC apps on Azure Container Apps seamlessly. His Docker and cloud skills are well above his experience level."</p>
+                    <div class="testi-card reveal" role="article">
+                        <div class="testi-stars" aria-label="5 stars">★★★★★</div>
+                        <p class="testi-text">"Deployed two full-stack POC apps on Azure Container Apps without a hitch. His Docker and cloud skills are well above his experience level."</p>
                         <div class="testi-author">
-                            <div class="testi-avatar">RT</div>
+                            <div class="testi-avatar" aria-hidden="true">RT</div>
                             <div>
                                 <div class="testi-name">Rahul Thomas</div>
                                 <div class="testi-role">Cloud Architect, Infocreon</div>
                             </div>
                         </div>
                     </div>
-                    <div class="testi-card fade-in-up delay-200">
-                        <div class="testi-stars">★★★★★</div>
-                        <p class="testi-text">"The RASA chatbot he built was creative and well-structured. His understanding of NLP concepts and dialog management is impressive for an MCA student."</p>
+                    <div class="testi-card reveal" role="article">
+                        <div class="testi-stars" aria-label="5 stars">★★★★★</div>
+                        <p class="testi-text">"The RASA chatbot he built was creative and well-structured. His NLP concepts and dialog management understanding is impressive for an MCA student."</p>
                         <div class="testi-author">
-                            <div class="testi-avatar">LA</div>
+                            <div class="testi-avatar" aria-hidden="true">LA</div>
                             <div>
                                 <div class="testi-name">Lekha Anand</div>
                                 <div class="testi-role">AI Researcher, Academia</div>
@@ -468,89 +767,109 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Achievements Strip -->
+                <div class="achievements-strip reveal" aria-label="Certifications and achievements">
+                    <div class="achievement-item">
+                        <i data-lucide="award"></i>
+                        <div>
+                            <span class="ach-title">Azure Fundamentals</span>
+                            <span class="ach-sub">Microsoft — In Progress</span>
+                        </div>
+                    </div>
+                    <div class="achievement-item">
+                        <i data-lucide="shield-check"></i>
+                        <div>
+                            <span class="ach-title">Docker &amp; Containerization</span>
+                            <span class="ach-sub">Production Deployed · 2025</span>
+                        </div>
+                    </div>
+                    <div class="achievement-item">
+                        <i data-lucide="graduation-cap"></i>
+                        <div>
+                            <span class="ach-title">MCA Scholar</span>
+                            <span class="ach-sub">Nehru College · Batch 2026</span>
+                        </div>
+                    </div>
+                    <div class="achievement-item">
+                        <i data-lucide="zap"></i>
+                        <div>
+                            <span class="ach-title">Internship · Real Rails</span>
+                            <span class="ach-sub">Infocreon Solutions · 2025</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- ═══════════════════ FAQ ═══════════════════ -->
-        <section id="faq" class="section-pad">
+        <!-- ═══════════════════ FAQs ═══════════════════ -->
+        <section id="faq" class="section-pad section-alt" aria-labelledby="faq-heading">
             <div class="container">
-                <div class="section-header fade-in-up">
+                <div class="section-header reveal">
                     <span class="section-tag">FAQs</span>
-                    <h2 class="section-title">Frequently Asked Questions</h2>
+                    <h2 class="section-title" id="faq-heading">Frequently Asked Questions</h2>
                     <p class="section-sub">Everything you need to know before we work together</p>
                 </div>
-
                 <div class="faq-grid">
-                    <div class="faq-list">
-                        <div class="faq-item fade-in-up">
-                            <button class="faq-q" aria-expanded="false">
+                    <div class="faq-list" role="list">
+                        <div class="faq-item reveal" role="listitem">
+                            <button class="faq-q" aria-expanded="false" id="faq-btn-1" aria-controls="faq-ans-1">
                                 Are you available for freelance or part-time projects?
-                                <i data-lucide="chevron-down" class="faq-chevron"></i>
+                                <i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i>
                             </button>
-                            <div class="faq-a">
-                                <p>Yes! I'm currently open to freelance projects, internships, and junior developer roles. I can commit up to 30–40 hours per week depending on the project scope. Reach out and let's discuss your requirements.</p>
+                            <div class="faq-a" id="faq-ans-1" role="region" aria-labelledby="faq-btn-1">
+                                <p>Yes! I'm currently open to freelance projects, internships, and junior developer roles. I can commit up to 30–40 hours per week depending on scope. Reach out and let's talk.</p>
                             </div>
                         </div>
-                        <div class="faq-item fade-in-up delay-50">
-                            <button class="faq-q" aria-expanded="false">
+                        <div class="faq-item reveal" role="listitem">
+                            <button class="faq-q" aria-expanded="false" id="faq-btn-2" aria-controls="faq-ans-2">
                                 What types of projects do you specialize in?
-                                <i data-lucide="chevron-down" class="faq-chevron"></i>
+                                <i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i>
                             </button>
-                            <div class="faq-a">
+                            <div class="faq-a" id="faq-ans-2" role="region" aria-labelledby="faq-btn-2">
                                 <p>I specialize in frontend web development (React.js, Next.js), full-stack Django/Flask applications, and data analytics with Power BI. I also work on ML model integration, NLP chatbots, and cloud deployments on Azure.</p>
                             </div>
                         </div>
-                        <div class="faq-item fade-in-up delay-100">
-                            <button class="faq-q" aria-expanded="false">
+                        <div class="faq-item reveal" role="listitem">
+                            <button class="faq-q" aria-expanded="false" id="faq-btn-3" aria-controls="faq-ans-3">
                                 What is your typical project delivery timeline?
-                                <i data-lucide="chevron-down" class="faq-chevron"></i>
+                                <i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i>
                             </button>
-                            <div class="faq-a">
-                                <p>It depends on complexity. A landing page typically takes 3–7 days. A full-stack web app with backend and deployment takes 2–5 weeks. I follow Spec-Driven Development, so we define clear milestones upfront before writing any code.</p>
+                            <div class="faq-a" id="faq-ans-3" role="region" aria-labelledby="faq-btn-3">
+                                <p>A landing page typically takes 3–7 days. A full-stack web app with backend and deployment takes 2–5 weeks. I follow Spec-Driven Development — clear milestones defined upfront before code is written.</p>
                             </div>
                         </div>
-                        <div class="faq-item fade-in-up delay-150">
-                            <button class="faq-q" aria-expanded="false">
+                        <div class="faq-item reveal" role="listitem">
+                            <button class="faq-q" aria-expanded="false" id="faq-btn-4" aria-controls="faq-ans-4">
                                 Do you work with international clients?
-                                <i data-lucide="chevron-down" class="faq-chevron"></i>
+                                <i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i>
                             </button>
-                            <div class="faq-a">
-                                <p>Absolutely. I'm comfortable communicating in English and can adapt to various time zones. I've collaborated in remote engineering environments and am familiar with Agile workflows, standups, and async tools like Slack and Notion.</p>
+                            <div class="faq-a" id="faq-ans-4" role="region" aria-labelledby="faq-btn-4">
+                                <p>Absolutely. I'm comfortable communicating in English and can adapt to various time zones. I'm familiar with Agile workflows, async standups, and tools like Slack and Notion.</p>
                             </div>
                         </div>
-                        <div class="faq-item fade-in-up delay-200">
-                            <button class="faq-q" aria-expanded="false">
-                                What tools and technologies do you use?
-                                <i data-lucide="chevron-down" class="faq-chevron"></i>
-                            </button>
-                            <div class="faq-a">
-                                <p>Frontend: React.js, Next.js, TypeScript, HTML5, CSS3, Bootstrap. Backend: Python, Django, Flask, FastAPI. Data: Power BI, Pandas, Scikit-learn. Infrastructure: Docker, Azure, Git/GitHub. I follow clean code practices and write well-documented, maintainable code.</p>
-                            </div>
-                        </div>
-                        <div class="faq-item fade-in-up delay-250">
-                            <button class="faq-q" aria-expanded="false">
+                        <div class="faq-item reveal" role="listitem">
+                            <button class="faq-q" aria-expanded="false" id="faq-btn-5" aria-controls="faq-ans-5">
                                 How do I get started working with you?
-                                <i data-lucide="chevron-down" class="faq-chevron"></i>
+                                <i data-lucide="chevron-down" class="faq-chevron" aria-hidden="true"></i>
                             </button>
-                            <div class="faq-a">
-                                <p>Simply reach out via the contact form below or email me at solamanum@gmail.com. Describe your project, timeline, and budget. I'll respond within 24 hours with an initial assessment and we can schedule a discovery call from there.</p>
+                            <div class="faq-a" id="faq-ans-5" role="region" aria-labelledby="faq-btn-5">
+                                <p>Email me at solamanum@gmail.com or use the contact form below. Describe your project, timeline, and budget. I'll respond within 24 hours with an initial assessment.</p>
                             </div>
                         </div>
                     </div>
 
-                    <!-- FAQ CTA Panel -->
-                    <div class="faq-cta-panel fade-in-up delay-100">
+                    <div class="faq-cta-panel reveal">
                         <div class="faq-cta-inner">
-                            <div class="faq-cta-icon"><i data-lucide="message-circle"></i></div>
+                            <div class="faq-cta-icon" aria-hidden="true"><i data-lucide="message-circle"></i></div>
                             <h3>Still have questions?</h3>
-                            <p>Can't find what you're looking for? Send me a direct message and I'll get back to you within 24 hours.</p>
-                            <a href="mailto:solamanum@gmail.com" class="btn-primary">
+                            <p>Can't find what you're looking for? Send me a message and I'll get back to you within 24 hours.</p>
+                            <a href="mailto:solamanum@gmail.com" class="btn-primary" id="faq-email-btn">
                                 Email Me <i data-lucide="mail"></i>
                             </a>
                             <div class="faq-socials">
                                 <a href="https://www.linkedin.com/in/solaman-um-b4264427b/" target="_blank" rel="noopener" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
                                 <a href="https://github.com/SOLAMANum" target="_blank" rel="noopener" aria-label="GitHub (SOLAMANum)"><i data-lucide="github"></i></a>
-                                <a href="https://github.com/Solomanum" target="_blank" rel="noopener" aria-label="GitHub (Solomanum)"><i data-lucide="github"></i></a>
                                 <a href="mailto:solamanum@gmail.com" aria-label="Email"><i data-lucide="mail"></i></a>
                             </div>
                         </div>
@@ -560,139 +879,143 @@
         </section>
 
         <!-- ═══════════════════ CONTACT ═══════════════════ -->
-        <section id="contact" class="section-pad section-alt">
+        <section id="contact" class="section-pad" aria-labelledby="contact-heading">
             <div class="container">
-                <div class="section-header fade-in-up">
-                    <span class="section-tag">Get In Touch</span>
-                    <h2 class="section-title">Let's Build Together</h2>
-                    <p class="section-sub">Open to internships, junior roles, and freelance projects. Response within 24 hours.</p>
-                </div>
-                <div class="contact-grid">
-                    <div class="contact-info fade-in-up">
-                        <div class="contact-item">
-                            <div class="contact-icon-box"><i data-lucide="mail"></i></div>
-                            <div>
-                                <p class="contact-item-label">Email</p>
-                                <a href="mailto:solamanum@gmail.com">solamanum@gmail.com</a>
+                <div class="contact-layout">
+                    <!-- Left: Invitation -->
+                    <div class="contact-left reveal">
+                        <span class="section-tag">Get In Touch</span>
+                        <h2 class="section-title left-align" id="contact-heading">Let's Build<br>Something Great</h2>
+                        <p class="contact-intro">Open to internships, junior developer roles, freelance projects, and collaborations. I respond within 24 hours.</p>
+
+                        <div class="contact-details">
+                            <a href="mailto:solamanum@gmail.com" class="contact-detail-item" id="contact-email-link">
+                                <div class="contact-icon-box"><i data-lucide="mail"></i></div>
+                                <div>
+                                    <span class="contact-detail-label">Email</span>
+                                    <span class="contact-detail-value">solamanum@gmail.com</span>
+                                </div>
+                            </a>
+                            <a href="tel:+919526127632" class="contact-detail-item" id="contact-phone-link">
+                                <div class="contact-icon-box"><i data-lucide="phone"></i></div>
+                                <div>
+                                    <span class="contact-detail-label">Phone</span>
+                                    <span class="contact-detail-value">+91 9526127632</span>
+                                </div>
+                            </a>
+                            <div class="contact-detail-item">
+                                <div class="contact-icon-box"><i data-lucide="map-pin"></i></div>
+                                <div>
+                                    <span class="contact-detail-label">Location</span>
+                                    <span class="contact-detail-value">Thrissur, Kerala, India</span>
+                                </div>
                             </div>
                         </div>
-                        <div class="contact-item">
-                            <div class="contact-icon-box"><i data-lucide="phone"></i></div>
-                            <div>
-                                <p class="contact-item-label">Phone</p>
-                                <a href="tel:+919526127632">+91 9526127632</a>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon-box"><i data-lucide="map-pin"></i></div>
-                            <div>
-                                <p class="contact-item-label">Location</p>
-                                <span>Thrissur, Kerala, India</span>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon-box"><i data-lucide="linkedin"></i></div>
-                            <div>
-                                <p class="contact-item-label">LinkedIn</p>
-                                <a href="https://www.linkedin.com/in/solaman-um-b4264427b/" target="_blank" rel="noopener">solaman-um-b4264427b</a>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon-box"><i data-lucide="github"></i></div>
-                            <div>
-                                <p class="contact-item-label">GitHub (SOLAMANum)</p>
-                                <a href="https://github.com/SOLAMANum" target="_blank" rel="noopener">github.com/SOLAMANum</a>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon-box"><i data-lucide="github"></i></div>
-                            <div>
-                                <p class="contact-item-label">GitHub (Solomanum)</p>
-                                <a href="https://github.com/Solomanum" target="_blank" rel="noopener">github.com/Solomanum</a>
-                            </div>
+
+                        <div class="contact-socials">
+                            <a href="https://www.linkedin.com/in/solaman-um-b4264427b/" target="_blank" rel="noopener" aria-label="LinkedIn" id="contact-linkedin" class="social-pill">
+                                <i data-lucide="linkedin"></i> LinkedIn
+                            </a>
+                            <a href="https://github.com/SOLAMANum" target="_blank" rel="noopener" aria-label="GitHub" id="contact-github" class="social-pill">
+                                <i data-lucide="github"></i> GitHub
+                            </a>
+                            <a href="resume.html" target="_blank" rel="noopener" id="contact-resume" class="social-pill">
+                                <i data-lucide="file-text"></i> Resume
+                            </a>
                         </div>
                     </div>
-                    <form id="contact-form" class="contact-form fade-in-up delay-200">
-                        <!-- Web3Forms Access Key and Botcheck Spam Protection -->
+
+                    <!-- Right: Form -->
+                    <form id="contact-form" class="contact-form reveal" novalidate>
                         <input type="hidden" name="access_key" value="1c0c8a92-7ddf-47e1-8752-94b1450c69ba">
-                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                        <input type="checkbox" name="botcheck" class="hidden" style="display:none;" tabindex="-1" aria-hidden="true">
+
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="name">Your Name</label>
-                                <input type="text" id="name" name="name" placeholder="John Doe" required>
+                                <input type="text" id="name" name="name" placeholder="Jane Smith" required autocomplete="name" class="form-input">
+                                <span class="field-error" id="name-error" aria-live="polite"></span>
                             </div>
                             <div class="form-group">
                                 <label for="email">Email Address</label>
-                                <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                                <input type="email" id="email" name="email" placeholder="jane@example.com" required autocomplete="email" class="form-input">
+                                <span class="field-error" id="email-error" aria-live="polite"></span>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="subject">Subject</label>
-                            <input type="text" id="subject" name="subject" placeholder="Project Collaboration" required>
+                            <input type="text" id="subject" name="subject" placeholder="Project Collaboration" required class="form-input">
+                            <span class="field-error" id="subject-error" aria-live="polite"></span>
                         </div>
                         <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" placeholder="Describe your project, timeline, and budget..." required></textarea>
+                            <label for="message">Message <span class="char-count" id="char-count">0 / 1000</span></label>
+                            <textarea id="message" name="message" rows="5" placeholder="Describe your project, timeline, and budget..." required class="form-input" maxlength="1000"></textarea>
+                            <span class="field-error" id="message-error" aria-live="polite"></span>
                         </div>
                         <button type="submit" class="btn-primary btn-full" id="submit-btn">
                             Send Message <i data-lucide="send"></i>
                         </button>
-                        <div class="form-feedback hidden" id="form-feedback"></div>
+                        <div class="form-feedback hidden" id="form-feedback" role="alert" aria-live="polite"></div>
                     </form>
                 </div>
             </div>
         </section>
+
     </main>
 
     <!-- ═══════════════════ FOOTER ═══════════════════ -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="container">
             <div class="footer-top">
                 <div class="footer-brand">
                     <a href="#home" class="footer-logo">Solaman<span>.</span></a>
-                    <p>Frontend Developer &amp; Data Analyst. Crafting clean code and actionable insights from Thrissur, India.</p>
+                    <p>Frontend Developer &amp; Data Analyst. Building clean code and actionable insights from Thrissur, India.</p>
+                    <div class="footer-social-icons">
+                        <a href="https://www.linkedin.com/in/solaman-um-b4264427b/" target="_blank" rel="noopener" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                        <a href="https://github.com/SOLAMANum" target="_blank" rel="noopener" aria-label="GitHub"><i data-lucide="github"></i></a>
+                        <a href="mailto:solamanum@gmail.com" aria-label="Email"><i data-lucide="mail"></i></a>
+                    </div>
                 </div>
 
-                <!-- Experience -->
+                <div class="footer-nav">
+                    <h4>Navigation</h4>
+                    <nav aria-label="Footer navigation">
+                        <a href="#projects">Projects</a>
+                        <a href="#about">About</a>
+                        <a href="#skills">Skills</a>
+                        <a href="#experience">Experience</a>
+                        <a href="#contact">Contact</a>
+                    </nav>
+                </div>
+
                 <div class="footer-experience">
                     <h4>Experience</h4>
                     <div class="exp-item">
-                        <div class="exp-dot"></div>
+                        <div class="exp-dot" aria-hidden="true"></div>
                         <div>
                             <p class="exp-role">Frontend &amp; Cloud Intern</p>
                             <p class="exp-company">Infocreon Solutions (Real Rails) · 2025</p>
                         </div>
                     </div>
                     <div class="exp-item">
-                        <div class="exp-dot"></div>
+                        <div class="exp-dot" aria-hidden="true"></div>
                         <div>
                             <p class="exp-role">MCA Scholar</p>
                             <p class="exp-company">Nehru College of Engineering · 2024–2026</p>
                         </div>
                     </div>
                 </div>
-
-                <div class="footer-connect">
-                    <h4>Connect</h4>
-                    <div class="footer-social-icons">
-                        <a href="https://www.linkedin.com/in/solaman-um-b4264427b/" target="_blank" rel="noopener" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
-                        <a href="https://github.com/SOLAMANum" target="_blank" rel="noopener" aria-label="GitHub (SOLAMANum)"><i data-lucide="github"></i></a>
-                        <a href="https://github.com/Solomanum" target="_blank" rel="noopener" aria-label="GitHub (Solomanum)"><i data-lucide="github"></i></a>
-                        <a href="mailto:solamanum@gmail.com" aria-label="Email"><i data-lucide="mail"></i></a>
-                        <a href="tel:+919526127632" aria-label="Phone"><i data-lucide="phone"></i></a>
-                    </div>
-                </div>
             </div>
 
             <div class="footer-bottom">
                 <p>&copy; 2026 Solaman U M. All rights reserved.</p>
-                <p>Designed for startups, recruiters &amp; enterprise clients.</p>
+                <p>Built with ♥ in Kerala · Designed with precision</p>
             </div>
         </div>
     </footer>
 
     <!-- Floating CTA -->
-    <a href="#contact" class="floating-cta" id="floating-cta" aria-label="Hire Me">
+    <a href="#contact" class="floating-cta" id="floating-cta" aria-label="Hire Me — contact Solaman">
         <i data-lucide="zap"></i>
         <span>Hire Me</span>
     </a>
